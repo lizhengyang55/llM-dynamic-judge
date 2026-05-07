@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import logging
 import random
-from typing import Dict, List, Sequence, Tuple
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 from core.database import MetricDatabase, MetricItem, MetricReason
 
@@ -19,38 +19,45 @@ class DualAgentMock:
         self._new_metric_idx = 0
         self._topic_templates: Dict[str, List[str]] = {
             "math": [
-                "逻辑推导完整性",
-                "符号使用一致性",
-                "边界条件覆盖",
-                "计算过程可核验",
-                "结论与题设对齐",
+                "logical_derivation",
+                "symbol_consistency",
+                "boundary_coverage",
+                "calculation_verifiability",
+                "conclusion_alignment",
             ],
             "coding": [
-                "算法复杂度合理",
-                "异常分支处理",
-                "代码可维护性",
-                "测试覆盖意识",
-                "接口契约清晰",
+                "algorithmic_complexity",
+                "edge_case_handling",
+                "maintainability",
+                "test_coverage",
+                "interface_contract",
             ],
             "writing": [
-                "论点聚焦程度",
-                "表达自然度",
-                "事实支撑密度",
-                "结构层次清楚",
-                "风格与受众匹配",
+                "argument_focus",
+                "natural_expression",
+                "evidence_density",
+                "structural_clarity",
+                "audience_fit",
             ],
             "reasoning": [
-                "证据链闭合",
-                "反例敏感度",
-                "假设显式化",
-                "多步推理稳定",
-                "结论置信校准",
+                "evidence_chain",
+                "counterexample_sensitivity",
+                "assumption_explicitness",
+                "multi_step_stability",
+                "confidence_calibration",
+            ],
+            "general": [
+                "instruction_following",
+                "factual_grounding",
+                "completeness",
+                "clarity",
+                "helpfulness",
             ],
         }
 
     def seed_database(self, db: MetricDatabase, topics: Sequence[str], per_topic: int = 4) -> None:
         for topic in topics:
-            templates = self._topic_templates.get(topic, self._topic_templates["reasoning"])
+            templates = self._topic_templates.get(topic, self._topic_templates["general"])
             for idx in range(per_topic):
                 name = f"{topic}:{templates[idx % len(templates)]}"
                 db.add_metric(MetricItem(name=name, topic=topic))
@@ -62,13 +69,32 @@ class DualAgentMock:
         ans_b: str,
         db: MetricDatabase,
         m_value: float,
+        user_prompt: Optional[str] = None,
     ) -> Tuple[List[MetricReason], List[MetricReason]]:
-        del ans_a, ans_b
+        del ans_a, ans_b, user_prompt
         reasons_a = self._build_side_reasons(topic=topic, db=db, m_value=m_value, side="A")
         reasons_b = self._build_side_reasons(topic=topic, db=db, m_value=m_value, side="B")
         logger.info("Agent A reasons: %s", [reason.label() for reason in reasons_a])
         logger.info("Agent B reasons: %s", [reason.label() for reason in reasons_b])
         return reasons_a, reasons_b
+
+    def evaluate_pairs_batch(
+        self,
+        batch_pairs: List[Any],
+        db: MetricDatabase,
+        m_value: float,
+    ) -> List[Tuple[List[MetricReason], List[MetricReason]]]:
+        return [
+            self.evaluate_pair(
+                topic=sample.topic,
+                ans_a=sample.answer_a,
+                ans_b=sample.answer_b,
+                db=db,
+                m_value=m_value,
+                user_prompt=sample.user_prompt,
+            )
+            for sample in batch_pairs
+        ]
 
     def _build_side_reasons(
         self,
@@ -121,12 +147,12 @@ class DualAgentMock:
         side: str,
         exclude_names: set[str],
     ) -> MetricItem:
-        templates = self._topic_templates.get(topic, self._topic_templates["reasoning"])
+        templates = self._topic_templates.get(topic, self._topic_templates["general"])
         phrase = self.rng.choice(templates)
 
         for _ in range(20):
             self._new_metric_idx += 1
-            name = f"{topic}:新指标-{phrase}-{side}-{self._new_metric_idx:04d}"
+            name = f"{topic}:generated_metric_{phrase}_{side}_{self._new_metric_idx:04d}"
             if name not in exclude_names:
                 exclude_names.add(name)
                 return db.add_metric(
@@ -138,9 +164,8 @@ class DualAgentMock:
                     )
                 )
 
-        fallback_name = f"{topic}:新指标-{side}-{self.rng.random():.8f}"
+        fallback_name = f"{topic}:generated_metric_{side}_{self.rng.random():.8f}"
         return db.add_metric(MetricItem(name=fallback_name, topic=topic))
 
     def _sample_polarity(self) -> str:
         return "adv" if self.rng.random() >= 0.35 else "dis"
-

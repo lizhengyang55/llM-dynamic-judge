@@ -3,7 +3,7 @@ from __future__ import annotations
 import logging
 import random
 from dataclasses import dataclass
-from typing import Dict, List, Optional, Sequence, Tuple
+from typing import Dict, List, Optional, Protocol, Sequence, TYPE_CHECKING, Tuple
 
 from core.database import DatabaseConfig, MetricDatabase, MetricItem, MetricReason
 from core.math_utils import (
@@ -16,6 +16,30 @@ from llm_api.agent_mock import DualAgentMock
 
 logger = logging.getLogger(__name__)
 
+if TYPE_CHECKING:
+    from core.data_loader import PairwiseSample
+
+
+class PairwiseAgent(Protocol):
+    def evaluate_pair(
+        self,
+        topic: str,
+        ans_a: str,
+        ans_b: str,
+        db: MetricDatabase,
+        m_value: float,
+        user_prompt: Optional[str] = None,
+    ) -> Tuple[List[MetricReason], List[MetricReason]]:
+        ...
+
+    def evaluate_pairs_batch(
+        self,
+        batch_pairs: List["PairwiseSample"],
+        db: MetricDatabase,
+        m_value: float,
+    ) -> List[Tuple[List[MetricReason], List[MetricReason]]]:
+        ...
+
 
 @dataclass(frozen=True)
 class EvaluatorConfig:
@@ -26,6 +50,7 @@ class EvaluatorConfig:
     bias_alpha: float = 2.0
     bias_epsilon: float = 0.1
     softmax_tau: float = 2.0
+    tie_epsilon: float = 1e-9
     hit_reward: float = 0.18
     miss_penalty: float = 0.10
     ambiguous_penalty: float = 0.04
@@ -49,14 +74,24 @@ class EvaluatorConfig:
 
 
 class EvaluatorPipeline:
-    def __init__(self, config: Optional[EvaluatorConfig] = None) -> None:
+    def __init__(
+        self,
+        config: Optional[EvaluatorConfig] = None,
+        agent: Optional[PairwiseAgent] = None,
+    ) -> None:
         self.config = config or EvaluatorConfig()
         self.rng = random.Random(self.config.random_seed)
         self.db = MetricDatabase(config=self.config.to_database_config())
-        self.agent = DualAgentMock(reasons_per_side=self.config.reasons_per_side, rng=self.rng)
+        self.agent: PairwiseAgent = agent or DualAgentMock(
+            reasons_per_side=self.config.reasons_per_side,
+            rng=self.rng,
+        )
         self.sampled_question_count = 0
 
     def bootstrap_mock_data(self, topics: Sequence[str], per_topic: int = 4) -> None:
+        if not hasattr(self.agent, "seed_database"):
+            logger.info("Agent has no seed_database method; skip mock bootstrap.")
+            return
         self.agent.seed_database(db=self.db, topics=topics, per_topic=per_topic)
         logger.info("Bootstrapped Metric DB with %d metric(s).", len(self.db))
 
@@ -68,7 +103,13 @@ class EvaluatorPipeline:
             beta=self.config.exploration_beta,
         )
 
-    def train_step(self, topic: str, ans_chosen: str, ans_rejected: str) -> None:
+    def train_step(
+        self,
+        topic: str,
+        ans_chosen: str,
+        ans_rejected: str,
+        user_prompt: Optional[str] = None,
+    ) -> None:
         m_value = self.compute_m_value()
         logger.info(
             "Train step topic=%s | N=%d | S=%d | m=%.4f",
@@ -84,6 +125,7 @@ class EvaluatorPipeline:
             ans_b=ans_rejected,
             db=self.db,
             m_value=m_value,
+            user_prompt=user_prompt,
         )
         self.db.update_metric_weights(
             topic=topic,
@@ -92,7 +134,50 @@ class EvaluatorPipeline:
         )
         self.sampled_question_count += 1
 
-    def inference_step(self, topic: str, ans_a: str, ans_b: str) -> Dict[str, object]:
+    def train_batch(self, batch: List["PairwiseSample"]) -> None:
+        if not batch:
+            return
+
+        m_value = self.compute_m_value()
+        logger.info(
+            "Train batch size=%d | N=%d | S=%d | m=%.4f",
+            len(batch),
+            len(self.db),
+            self.sampled_question_count,
+            m_value,
+        )
+
+        batch_reasons = self.agent.evaluate_pairs_batch(
+            batch_pairs=batch,
+            db=self.db,
+            m_value=m_value,
+        )
+        if len(batch_reasons) != len(batch):
+            raise ValueError("agent returned a different number of batch results")
+
+        for sample, (reasons_a, reasons_b) in zip(batch, batch_reasons):
+            if sample.label == "A":
+                chosen_reasons = reasons_a
+                rejected_reasons = reasons_b
+            else:
+                chosen_reasons = reasons_b
+                rejected_reasons = reasons_a
+
+            self.db.update_metric_weights(
+                topic=sample.topic,
+                chosen_reasons=chosen_reasons,
+                rejected_reasons=rejected_reasons,
+            )
+
+        self.sampled_question_count += len(batch)
+
+    def inference_step(
+        self,
+        topic: str,
+        ans_a: str,
+        ans_b: str,
+        user_prompt: Optional[str] = None,
+    ) -> Dict[str, object]:
         m_value = self.compute_m_value()
         logger.info(
             "Inference topic=%s | N=%d | S=%d | m=%.4f",
@@ -108,31 +193,47 @@ class EvaluatorPipeline:
             ans_b=ans_b,
             db=self.db,
             m_value=m_value,
+            user_prompt=user_prompt,
         )
-        score_a, details_a = self._score_reasons_with_dynamic_bias(topic, reasons_a)
-        score_b, details_b = self._score_reasons_with_dynamic_bias(topic, reasons_b)
-        prob_a = sharpened_softmax_probability(
-            score_a=score_a,
-            score_b=score_b,
-            tau=self.config.softmax_tau,
+        return self._build_inference_result(
+            topic=topic,
+            m_value=m_value,
+            reasons_a=reasons_a,
+            reasons_b=reasons_b,
         )
-        winner = "A" if prob_a >= 0.5 else "B"
 
-        logger.info("S_A=%.4f | S_B=%.4f", score_a, score_b)
-        logger.info("P(A beats B)=%.4f | winner=%s", prob_a, winner)
+    def inference_batch(self, batch: List["PairwiseSample"]) -> List[Dict[str, object]]:
+        if not batch:
+            return []
 
-        return {
-            "topic": topic,
-            "m_value": m_value,
-            "S_A": score_a,
-            "S_B": score_b,
-            "prob_A": prob_a,
-            "winner": winner,
-            "reasons_A": reasons_a,
-            "reasons_B": reasons_b,
-            "details_A": details_a,
-            "details_B": details_b,
-        }
+        m_value = self.compute_m_value()
+        logger.info(
+            "Inference batch size=%d | N=%d | S=%d | m=%.4f",
+            len(batch),
+            len(self.db),
+            self.sampled_question_count,
+            m_value,
+        )
+
+        batch_reasons = self.agent.evaluate_pairs_batch(
+            batch_pairs=batch,
+            db=self.db,
+            m_value=m_value,
+        )
+        if len(batch_reasons) != len(batch):
+            raise ValueError("agent returned a different number of batch results")
+
+        results: List[Dict[str, object]] = []
+        for sample, (reasons_a, reasons_b) in zip(batch, batch_reasons):
+            results.append(
+                self._build_inference_result(
+                    topic=sample.topic,
+                    m_value=m_value,
+                    reasons_a=reasons_a,
+                    reasons_b=reasons_b,
+                )
+            )
+        return results
 
     def purge(self) -> List[MetricItem]:
         return self.db.purge_metrics(
@@ -187,3 +288,39 @@ class EvaluatorPipeline:
 
         return total_score, details
 
+    def _build_inference_result(
+        self,
+        topic: str,
+        m_value: float,
+        reasons_a: Sequence[MetricReason],
+        reasons_b: Sequence[MetricReason],
+    ) -> Dict[str, object]:
+        score_a, details_a = self._score_reasons_with_dynamic_bias(topic, reasons_a)
+        score_b, details_b = self._score_reasons_with_dynamic_bias(topic, reasons_b)
+        prob_a = sharpened_softmax_probability(
+            score_a=score_a,
+            score_b=score_b,
+            tau=self.config.softmax_tau,
+        )
+        score_delta = score_a - score_b
+        if abs(score_delta) <= self.config.tie_epsilon:
+            winner = "tie"
+        else:
+            winner = "A" if score_delta > 0 else "B"
+
+        logger.info("S_A=%.4f | S_B=%.4f", score_a, score_b)
+        logger.info("P(A beats B)=%.4f | winner=%s", prob_a, winner)
+
+        return {
+            "topic": topic,
+            "m_value": m_value,
+            "S_A": score_a,
+            "S_B": score_b,
+            "prob_A": prob_a,
+            "score_delta": score_delta,
+            "winner": winner,
+            "reasons_A": list(reasons_a),
+            "reasons_B": list(reasons_b),
+            "details_A": details_a,
+            "details_B": details_b,
+        }
