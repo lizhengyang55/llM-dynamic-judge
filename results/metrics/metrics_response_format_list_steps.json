@@ -1,0 +1,84 @@
+{
+  "dimension_id": "response_format",
+  "group_label": "list_steps",
+  "num_samples_in_group": 27,
+  "num_candidate_metrics": 8,
+  "num_verified_metrics": 4,
+  "accuracy_threshold": 0.9,
+  "all_candidates": [
+    {
+      "metric_name": "step_clarity",
+      "metric_description": "Step clarity captures the explicitness and comprehensibility of each step listed in the response to a \"list_steps\" query. This metric is crucial because a clear presentation of steps allows users to easily follow instructions or understand a process. Positive indicators include well-defined steps that use straightforward language, logical sequencing, and avoidance of jargon unless defined. For example, a response that states, \"Step 1: Load the CSV file using `read.csv()`, Step 2: Use `summary()` to view the data\" demonstrates clarity. Negative indicators include vague or ambiguous phrasing, such as \"do something with the file\" or poorly structured steps that confuse the user. In cases where both responses provide clear steps but differ in detail, the response with more specific instructions should be preferred. If both responses lack clarity, they should be rated equally low.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "completeness_of_steps",
+      "metric_description": "Completeness of steps evaluates whether the response includes all necessary steps to fulfill the request in a \"list_steps\" query. This metric is important because incomplete instructions can lead to user frustration and unsuccessful task completion. Positive indicators include a comprehensive list that covers every aspect of the task, such as all required commands or considerations. For instance, a response that outlines all steps to analyze a CSV file, including loading, cleaning, and visualizing the data, is considered complete. Negative indicators include missing critical steps, such as omitting the step to save the updated DataFrame or failing to mention necessary libraries. In ambiguous cases where one response is more detailed but both are lacking some steps, the response with the most relevant steps should be rated higher. If both responses are equally incomplete, they should be rated the same.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "logical_sequence",
+      "metric_description": "Logical sequence assesses the order in which steps are presented in the response to a \"list_steps\" query. This metric is vital because a logical flow ensures that users can follow the instructions in a coherent manner. Positive indicators include a chronological or logical arrangement of steps that build on each other, such as starting with data import before data manipulation. For example, a response that lists steps in the order of \"Load data, Clean data, Analyze data\" demonstrates a logical sequence. Negative indicators include steps that appear out of order or that require the user to backtrack, such as cleaning data before loading it. In cases where both responses have a logical sequence but differ slightly in order, the one that aligns better with standard practices should be favored. If both sequences are illogical, they should receive the same low score.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "specificity_of_instructions",
+      "metric_description": "Specificity of instructions measures how detailed and precise the steps are in a response to a \"list_steps\" query. This metric is important because vague instructions can lead to user confusion and ineffective execution of tasks. Positive indicators include the use of specific commands, parameters, or examples that guide the user clearly, such as \"Use `pd.read_csv('filename.csv')` to load your data.\" Negative indicators include generic statements like \"process the data\" without any specifics on how to do so. Ambiguous situations may arise when one response is detailed but lacks context, while another is vague but contextually relevant; in such cases, the more contextually relevant response should be rated higher. If both responses are equally vague, they should be rated the same.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "relevance_to_query",
+      "metric_description": "Relevance to query evaluates how well the steps provided in the response align with the specific request made in the \"list_steps\" query. This metric is crucial because responses that deviate from the query can lead to user dissatisfaction and confusion. Positive indicators include steps that directly address the query's intent, such as providing steps specifically for analyzing a CSV file when asked. Negative indicators include irrelevant steps or topics that do not pertain to the user's request, such as discussing unrelated programming concepts. In cases where both responses are relevant but one includes additional, unnecessary information, the more concise response should be preferred. If both responses are equally relevant or irrelevant, they should be rated the same.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "formatting_consistency",
+      "metric_description": "Formatting consistency assesses the uniformity of the presentation style of the steps in the response to a \"list_steps\" query. This metric is important because consistent formatting aids readability and comprehension, making it easier for users to follow instructions. Positive indicators include uniform bullet points, numbering, or indentation styles throughout the response. For example, using a consistent numbering format for steps such as \"1. Load data, 2. Clean data\" enhances clarity. Negative indicators include mixed formats, such as alternating between bullet points and paragraphs or inconsistent capitalization. In ambiguous situations where one response is well-formatted but the other is slightly inconsistent, the better-formatted response should be favored. If both responses have formatting issues, they should be rated equally low.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "engagement_level",
+      "metric_description": "Engagement level measures how well the response captures and maintains user interest through its presentation of steps in a \"list_steps\" query. This metric is important because engaging content can motivate users to follow through with the instructions provided. Positive indicators include the use of conversational tone, humor, or relatable examples that connect with the user, such as \"Imagine you're a chef preparing a meal; first, gather your ingredients.\" Negative indicators include a dry, monotonous tone or overly technical language that may alienate users. In cases where one response is engaging but less informative and the other is informative but dull, the more engaging response should be rated higher. If both responses lack engagement, they should be rated the same.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "error_handling",
+      "metric_description": "Error handling evaluates how well the response anticipates potential issues or mistakes that users might encounter while following the steps in a \"list_steps\" query. This metric is crucial because proactive guidance can prevent user frustration and enhance the learning experience. Positive indicators include clear warnings about common pitfalls, suggestions for troubleshooting, or alternative methods if a step fails, such as \"If you encounter an error loading the file, check if the file path is correct.\" Negative indicators include a lack of guidance on potential errors or overly simplistic assumptions about user knowledge. In ambiguous cases where one response provides some error handling but is incomplete, while the other provides none, the response with any error handling should be rated higher. If both responses fail to address error handling, they should be rated the same.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    }
+  ],
+  "verified_metrics": [
+    {
+      "metric_name": "step_clarity",
+      "metric_description": "Step clarity captures the explicitness and comprehensibility of each step listed in the response to a \"list_steps\" query. This metric is crucial because a clear presentation of steps allows users to easily follow instructions or understand a process. Positive indicators include well-defined steps that use straightforward language, logical sequencing, and avoidance of jargon unless defined. For example, a response that states, \"Step 1: Load the CSV file using `read.csv()`, Step 2: Use `summary()` to view the data\" demonstrates clarity. Negative indicators include vague or ambiguous phrasing, such as \"do something with the file\" or poorly structured steps that confuse the user. In cases where both responses provide clear steps but differ in detail, the response with more specific instructions should be preferred. If both responses lack clarity, they should be rated equally low.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "completeness_of_steps",
+      "metric_description": "Completeness of steps evaluates whether the response includes all necessary steps to fulfill the request in a \"list_steps\" query. This metric is important because incomplete instructions can lead to user frustration and unsuccessful task completion. Positive indicators include a comprehensive list that covers every aspect of the task, such as all required commands or considerations. For instance, a response that outlines all steps to analyze a CSV file, including loading, cleaning, and visualizing the data, is considered complete. Negative indicators include missing critical steps, such as omitting the step to save the updated DataFrame or failing to mention necessary libraries. In ambiguous cases where one response is more detailed but both are lacking some steps, the response with the most relevant steps should be rated higher. If both responses are equally incomplete, they should be rated the same.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "logical_sequence",
+      "metric_description": "Logical sequence assesses the order in which steps are presented in the response to a \"list_steps\" query. This metric is vital because a logical flow ensures that users can follow the instructions in a coherent manner. Positive indicators include a chronological or logical arrangement of steps that build on each other, such as starting with data import before data manipulation. For example, a response that lists steps in the order of \"Load data, Clean data, Analyze data\" demonstrates a logical sequence. Negative indicators include steps that appear out of order or that require the user to backtrack, such as cleaning data before loading it. In cases where both responses have a logical sequence but differ slightly in order, the one that aligns better with standard practices should be favored. If both sequences are illogical, they should receive the same low score.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "specificity_of_instructions",
+      "metric_description": "Specificity of instructions measures how detailed and precise the steps are in a response to a \"list_steps\" query. This metric is important because vague instructions can lead to user confusion and ineffective execution of tasks. Positive indicators include the use of specific commands, parameters, or examples that guide the user clearly, such as \"Use `pd.read_csv('filename.csv')` to load your data.\" Negative indicators include generic statements like \"process the data\" without any specifics on how to do so. Ambiguous situations may arise when one response is detailed but lacks context, while another is vague but contextually relevant; in such cases, the more contextually relevant response should be rated higher. If both responses are equally vague, they should be rated the same.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    }
+  ]
+}

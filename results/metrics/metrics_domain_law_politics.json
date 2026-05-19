@@ -1,0 +1,72 @@
+{
+  "dimension_id": "domain",
+  "group_label": "law_politics",
+  "num_samples_in_group": 10,
+  "num_candidate_metrics": 8,
+  "num_verified_metrics": 2,
+  "accuracy_threshold": 0.9,
+  "all_candidates": [
+    {
+      "metric_name": "factual_accuracy",
+      "metric_description": "This metric captures the factual accuracy of the response in relation to the legal and political context of the queries. It is crucial for \"law_politics\" queries because accurate information is foundational for legal reasoning and political discourse. Positive indicators include the correct identification of legal principles, accurate historical references, and the use of verified statistics or facts relevant to the query. Conversely, negative indicators would be the inclusion of incorrect legal citations, misrepresentation of political events, or reliance on outdated or debunked information. Boundary cases may arise when both responses provide partially correct information; in such cases, the response with the most accurate and relevant details should be preferred. Tie-breaking should favor the response that includes more specific legal references or authoritative sources over a more general answer.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "relevance_to_query",
+      "metric_description": "This metric assesses how well the response addresses the specific question or prompt posed in the query. It is essential for \"law_politics\" queries because responses must directly engage with the issues raised to be considered useful. Positive indicators include a direct answer to the question, the inclusion of relevant legal terminology, and a clear connection to the political context of the query. Negative indicators would be off-topic information, vague responses that do not relate to the query, or failure to address the main points raised. Boundary cases may occur when responses provide some relevant information but miss key aspects of the query; in such instances, the response that covers more of the query's critical elements should be preferred. Tie-breaking should favor the response that demonstrates a clearer understanding of the query's intent.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "depth_of_analysis",
+      "metric_description": "This metric measures the depth of analysis provided in the response, assessing how thoroughly the response explores the legal or political implications of the query. Depth is important in \"law_politics\" queries as it demonstrates a nuanced understanding of complex issues. Positive indicators include the exploration of multiple perspectives, consideration of potential consequences, and the integration of relevant legal theories or frameworks. Negative indicators would be superficial treatment of the topic, failure to consider counterarguments, or overly simplistic conclusions. Boundary cases may occur when responses provide varying levels of detail; in such situations, the response that engages with more aspects of the issue should be preferred. Tie-breaking should favor the response that includes more comprehensive examples or case studies.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "clarity_and_coherence",
+      "metric_description": "This metric evaluates the clarity and coherence of the response, focusing on how well the ideas are organized and articulated. Clarity is vital in \"law_politics\" queries, as complex legal and political concepts must be communicated effectively to ensure understanding. Positive indicators include a logical structure, clear language, and the use of appropriate transitions between ideas. Negative indicators would be convoluted sentences, lack of organization, or jargon that is not explained, which could confuse the reader. Boundary cases may arise when both responses are somewhat clear but differ in organization; in such cases, the response with a more logical flow should be preferred. Tie-breaking should favor the response that uses simpler language while maintaining accuracy over a more complex but less clear response.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "adherence_to_format",
+      "metric_description": "This metric assesses how well the response adheres to the expected format or structure specified in the query, which is particularly relevant for structured prompts in \"law_politics\" queries. Adherence to format is important because it ensures that the response meets the user's needs and expectations. Positive indicators include following specified instructions, using bullet points or numbered lists when required, and maintaining clarity in formatting. Negative indicators would be failure to follow the requested format, disorganized presentation, or excessive verbosity that detracts from the response's effectiveness. Boundary cases may arise when both responses partially adhere to the format; in such instances, the response that is more organized and easier to read should be preferred. Tie-breaking should favor the response that more closely matches the requested format, even if it contains minor errors.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "engagement_with_counterarguments",
+      "metric_description": "This metric evaluates how well the response engages with potential counterarguments or alternative viewpoints related to the query. Engaging with counterarguments is crucial in \"law_politics\" queries, as it reflects critical thinking and a balanced perspective on contentious issues. Positive indicators include acknowledgment of opposing views, a reasoned rebuttal of those views, and the presentation of a well-rounded argument. Negative indicators would be ignoring counterarguments, presenting a one-sided perspective, or failing to address the complexity of the issue. Boundary cases may arise when both responses acknowledge counterarguments but differ in the depth of engagement; in such cases, the response that provides a more thorough rebuttal should be preferred. Tie-breaking should favor the response that includes citations or references to authoritative sources supporting its arguments.",
+      "accuracy": 0.4,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "ethical_considerations",
+      "metric_description": "This metric assesses how well the response addresses ethical considerations relevant to the legal or political context of the query. Ethical considerations are paramount in \"law_politics\" queries, as they often involve moral implications and societal impacts. Positive indicators include the identification of ethical dilemmas, discussion of the consequences of legal decisions, and recognition of the rights of affected parties. Negative indicators would be a lack of ethical awareness, failure to consider the broader implications of legal or political actions, or a purely technical focus without moral context. Boundary cases may arise when responses partially address ethical issues; in such instances, the response that provides a more comprehensive ethical analysis should be preferred. Tie-breaking should favor the response that discusses real-world implications over a purely theoretical approach.",
+      "accuracy": 0.3,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "use_of_authoritative_sources",
+      "metric_description": "This metric evaluates the extent to which the response incorporates authoritative sources to support its claims, which is particularly important in \"law_politics\" queries where credibility is paramount. Positive indicators include citations from legal texts, references to landmark cases, and the inclusion of statistics from reputable organizations. Negative indicators would be reliance on anecdotal evidence, lack of citations, or the use of questionable sources that undermine credibility. Boundary cases may occur when both responses use some authoritative sources but differ in quantity or quality; in such cases, the response with more reliable or relevant citations should be preferred. Tie-breaking should favor the response that integrates sources seamlessly into the argument over one that lists them without context.",
+      "accuracy": 0.3,
+      "tested_on": 10
+    }
+  ],
+  "verified_metrics": [
+    {
+      "metric_name": "factual_accuracy",
+      "metric_description": "This metric captures the factual accuracy of the response in relation to the legal and political context of the queries. It is crucial for \"law_politics\" queries because accurate information is foundational for legal reasoning and political discourse. Positive indicators include the correct identification of legal principles, accurate historical references, and the use of verified statistics or facts relevant to the query. Conversely, negative indicators would be the inclusion of incorrect legal citations, misrepresentation of political events, or reliance on outdated or debunked information. Boundary cases may arise when both responses provide partially correct information; in such cases, the response with the most accurate and relevant details should be preferred. Tie-breaking should favor the response that includes more specific legal references or authoritative sources over a more general answer.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "relevance_to_query",
+      "metric_description": "This metric assesses how well the response addresses the specific question or prompt posed in the query. It is essential for \"law_politics\" queries because responses must directly engage with the issues raised to be considered useful. Positive indicators include a direct answer to the question, the inclusion of relevant legal terminology, and a clear connection to the political context of the query. Negative indicators would be off-topic information, vague responses that do not relate to the query, or failure to address the main points raised. Boundary cases may occur when responses provide some relevant information but miss key aspects of the query; in such instances, the response that covers more of the query's critical elements should be preferred. Tie-breaking should favor the response that demonstrates a clearer understanding of the query's intent.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    }
+  ]
+}

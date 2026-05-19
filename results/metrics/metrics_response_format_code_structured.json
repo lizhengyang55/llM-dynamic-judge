@@ -1,0 +1,72 @@
+{
+  "dimension_id": "response_format",
+  "group_label": "code_structured",
+  "num_samples_in_group": 26,
+  "num_candidate_metrics": 8,
+  "num_verified_metrics": 2,
+  "accuracy_threshold": 0.9,
+  "all_candidates": [
+    {
+      "metric_name": "response_relevance",
+      "metric_description": "This metric measures how relevant the provided code is to the specific query asked, which is critical for ensuring that the solution directly addresses the user's needs. Positive indicators include code that directly implements the requested functionality, such as generating SQL queries or processing images as specified in the query. Negative indicators include code that deviates from the task, such as providing unrelated examples or generic solutions that do not meet the specific requirements of the query. Boundary cases may arise when responses partially address the query; in such instances, the response that aligns more closely with the query's intent should be favored. Tie-breaking should favor the response that includes additional relevant features or enhancements that improve the solution's applicability.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "adherence_to_requirements",
+      "metric_description": "This metric assesses how well the code adheres to the specific requirements and constraints set forth in the query, which is essential for delivering a solution that meets user expectations. Positive indicators include code that explicitly follows all specified requirements, such as returning results in the requested format (e.g., JSON) or handling specific input types as mentioned in the query. Negative indicators include code that ignores or misinterprets the requirements, such as providing output in an incorrect format or failing to handle specified edge cases. Boundary cases may occur when both responses partially satisfy the requirements; in such instances, the response that fulfills a greater number of the specified criteria should be favored. Tie-breaking should favor the response that includes additional features or enhancements that align with the requirements, demonstrating a proactive approach to meeting user needs.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "code_clarity",
+      "metric_description": "This metric evaluates the clarity of the code in terms of readability and comprehensibility, which is vital for users who may need to modify or understand the code later. Positive indicators include well-structured code with appropriate indentation, meaningful variable names, and the use of comments that explain complex sections. For example, a response that includes a Python script with clear function definitions and inline comments would score highly. Negative indicators include poorly formatted code that is difficult to read, such as inconsistent indentation, cryptic variable names, or a lack of comments, which can confuse users and hinder code maintenance. Ambiguous situations may occur when both responses are similarly clear; in such cases, a response that adheres to standard coding conventions (e.g., PEP 8 for Python) should be preferred. Tie-breaking should consider the presence of additional documentation or explanations that enhance understanding.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "code_correctness",
+      "metric_description": "This metric assesses the correctness of the code provided in response to \"code_structured\" queries. Correctness is crucial because it ensures that the code performs the intended function without errors, which is essential for user trust and usability. Positive indicators include the presence of syntactically correct code that produces the expected output when executed, such as a Python script that accurately extracts mileage from images as requested. Negative indicators include syntax errors, logical flaws, or code that fails to compile or run as intended, such as a missing function definition or incorrect variable usage. Boundary cases may arise when both responses contain partially correct code; in such instances, the response with the more complete or functional solution should be favored. Tie-breaking should favor the response that includes comments or explanations that clarify the code's functionality, as this demonstrates a deeper understanding of the task.",
+      "accuracy": 0.5,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "code_efficiency",
+      "metric_description": "This metric assesses the efficiency of the code in terms of performance and resource usage, which is important for ensuring that the solution runs optimally, especially in larger applications. Positive indicators include code that uses efficient algorithms or data structures, such as using list comprehensions in Python or minimizing database queries in SQL. Negative indicators include code that is unnecessarily complex or slow, such as using nested loops where a single pass would suffice or failing to optimize database joins. Boundary cases may occur when both responses are equally efficient; in such cases, the one that demonstrates a more sophisticated approach (e.g., using caching or lazy loading) should be preferred. Tie-breaking should consider the response that includes benchmarks or performance metrics that demonstrate its efficiency.",
+      "accuracy": 0.5,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "code_modularity",
+      "metric_description": "This metric assesses the modularity of the code, which is important for maintainability and reusability in software development. Positive indicators include the use of functions or classes that encapsulate specific functionality, allowing for easier updates and testing, such as defining a function to extract mileage from images. Negative indicators include monolithic code that lacks separation of concerns, making it difficult to modify or debug, such as a single block of code that performs multiple unrelated tasks. Boundary cases may occur when both responses demonstrate some level of modularity; in such instances, the response with clearer separation of functions or a more logical organization should be favored. Tie-breaking should favor the response that includes a clear main function or entry point that organizes the overall flow of the program.",
+      "accuracy": 0.5,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "documentation_quality",
+      "metric_description": "This metric evaluates the quality of the documentation accompanying the code, which is crucial for user understanding and future maintenance. Positive indicators include comprehensive comments, clear function docstrings, and external documentation that explains how to use the code effectively, such as a README file that outlines dependencies and usage examples. Negative indicators include sparse or unclear documentation that leaves users guessing about how to implement or modify the code, such as a lack of comments or vague explanations of complex logic. Boundary cases may arise when both responses contain some documentation; in such cases, the one that provides more detailed and structured documentation should be favored. Tie-breaking should consider the inclusion of examples or use cases that demonstrate how to apply the code in real-world scenarios.",
+      "accuracy": 0.5,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "error_handling",
+      "metric_description": "This metric evaluates the robustness of the code in terms of error handling, which is essential for creating reliable applications that can gracefully manage unexpected situations. Positive indicators include the presence of try-except blocks in Python or appropriate validation checks that prevent runtime errors, such as checking for file existence before processing. Negative indicators include a lack of error handling, such as code that crashes without informative messages or fails to manage edge cases, like empty inputs or invalid data types. Boundary cases may arise when both responses include some error handling; in such cases, the response that anticipates a wider range of potential errors should be favored. Tie-breaking should favor the response that provides user-friendly error messages or logging to help diagnose issues.",
+      "accuracy": 0.4,
+      "tested_on": 10
+    }
+  ],
+  "verified_metrics": [
+    {
+      "metric_name": "response_relevance",
+      "metric_description": "This metric measures how relevant the provided code is to the specific query asked, which is critical for ensuring that the solution directly addresses the user's needs. Positive indicators include code that directly implements the requested functionality, such as generating SQL queries or processing images as specified in the query. Negative indicators include code that deviates from the task, such as providing unrelated examples or generic solutions that do not meet the specific requirements of the query. Boundary cases may arise when responses partially address the query; in such instances, the response that aligns more closely with the query's intent should be favored. Tie-breaking should favor the response that includes additional relevant features or enhancements that improve the solution's applicability.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "adherence_to_requirements",
+      "metric_description": "This metric assesses how well the code adheres to the specific requirements and constraints set forth in the query, which is essential for delivering a solution that meets user expectations. Positive indicators include code that explicitly follows all specified requirements, such as returning results in the requested format (e.g., JSON) or handling specific input types as mentioned in the query. Negative indicators include code that ignores or misinterprets the requirements, such as providing output in an incorrect format or failing to handle specified edge cases. Boundary cases may occur when both responses partially satisfy the requirements; in such instances, the response that fulfills a greater number of the specified criteria should be favored. Tie-breaking should favor the response that includes additional features or enhancements that align with the requirements, demonstrating a proactive approach to meeting user needs.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    }
+  ]
+}

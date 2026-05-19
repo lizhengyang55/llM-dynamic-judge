@@ -1,0 +1,72 @@
+{
+  "dimension_id": "task_type",
+  "group_label": "reasoning_math",
+  "num_samples_in_group": 21,
+  "num_candidate_metrics": 8,
+  "num_verified_metrics": 2,
+  "accuracy_threshold": 0.9,
+  "all_candidates": [
+    {
+      "metric_name": "mathematical_accuracy",
+      "metric_description": "This metric evaluates the mathematical accuracy of the response, which is essential for \"reasoning_math\" queries as incorrect calculations or reasoning can lead to false conclusions. A response that scores high will present correct calculations, accurate interpretations of mathematical concepts, and valid solutions to the posed problems. Positive indicators include correct answers to calculations, proper use of mathematical terminology, and accurate representations of mathematical operations. On the other hand, negative indicators include incorrect calculations, misinterpretations of mathematical concepts, or presenting wrong answers without justification. Boundary cases may occur when one response contains minor calculation errors while the other is entirely incorrect; in such cases, the response with fewer errors should be favored. If both responses are equally accurate or inaccurate, a rater should prefer the one that provides more comprehensive reasoning or context for its calculations.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "logical_coherence",
+      "metric_description": "This metric assesses the logical coherence of the response to a \"reasoning_math\" query, which is crucial for ensuring that the reasoning process is clear and follows a rational progression. A response that performs well will exhibit a clear, step-by-step logical flow, where each statement builds on the previous one and leads to a valid conclusion. Positive indicators include structured arguments, appropriate use of mathematical principles, and clear explanations of reasoning behind each step. Conversely, poor performance is indicated by jumps in logic, unsupported claims, or conclusions that do not logically follow from the premises. Ambiguous situations may arise when both responses provide some logical reasoning but differ in clarity; in such cases, the response with the clearer structure should be favored. If both responses are equally coherent, a rater should prefer the one that includes more detailed explanations or examples to support its reasoning.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "clarity_of_explanation",
+      "metric_description": "This metric measures the clarity of the explanation provided in the response, which is vital for ensuring that the reasoning process is understandable to the user. A well-performing response will articulate its reasoning in a straightforward manner, using simple language and avoiding unnecessary jargon, while still accurately conveying the mathematical concepts involved. Positive indicators include clear definitions, step-by-step breakdowns of complex ideas, and the use of examples to illustrate points. Negative performance is indicated by convoluted language, lack of clarity in explanations, or failure to define key terms that may confuse the user. Ambiguities may arise when one response is clear but lacks depth, while another is detailed but convoluted; in such cases, clarity should take precedence. If clarity is equal, the response that provides more relevant examples or context should be preferred.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "engagement_with_query",
+      "metric_description": "This metric assesses how well the response engages with the specific query posed, which is crucial for ensuring that the answer is relevant and directly addresses the user's question. A high-scoring response will demonstrate a clear understanding of the query, directly referencing key elements and providing a tailored answer rather than generic information. Positive indicators include addressing all parts of the question, using the same terminology as the query, and providing specific answers to the posed mathematical problems. Conversely, poor performance is indicated by vague responses that do not directly relate to the query or fail to answer the question entirely. Boundary cases may occur when both responses engage with the query but one does so more thoroughly; in such cases, the more comprehensive response should be favored. If engagement is equal, the response that offers more relevant examples or applications of the concepts should be preferred.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "completeness_of_response",
+      "metric_description": "This metric evaluates the completeness of the response, which is essential for ensuring that all aspects of the query are addressed thoroughly. A response that performs well will provide a comprehensive answer, covering all necessary steps and considerations involved in solving the mathematical problem. Positive indicators include detailed calculations, thorough explanations of each step, and consideration of potential edge cases or alternative interpretations of the problem. Negative indicators include incomplete solutions, missing steps in calculations, or failure to address all components of the query. Ambiguities may arise when one response is complete but lacks clarity, while another is clear but incomplete; in such cases, completeness should take precedence. If both responses are equally complete or incomplete, the one that provides a clearer presentation of its reasoning should be preferred.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "relevance_of_information",
+      "metric_description": "This metric assesses the relevance of the information provided in the response, which is critical for ensuring that extraneous details do not distract from the core mathematical reasoning. A high-scoring response will focus on the necessary information that directly contributes to solving the query, avoiding unnecessary tangents or irrelevant data. Positive indicators include concise explanations that stick to the topic, relevant mathematical principles that directly apply to the problem, and avoidance of unrelated information. Negative indicators include excessive background information, irrelevant examples, or content that does not contribute to answering the question. Boundary cases may arise when one response includes some relevant information but also irrelevant details, while another is purely relevant but lacks depth; in such cases, relevance should take precedence. If relevance is equal, the response that provides a more comprehensive understanding of the topic should be preferred.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "use_of_examples",
+      "metric_description": "This metric evaluates the use of examples in the response, which is important for illustrating mathematical concepts and enhancing understanding. A response that scores well will include relevant examples that clarify complex ideas, demonstrate the application of mathematical principles, and reinforce the explanation provided. Positive indicators include clear, contextual examples that are directly related to the query and effectively illustrate the reasoning process. Negative performance is indicated by a lack of examples, irrelevant examples that do not support the explanation, or examples that confuse rather than clarify the concepts. Ambiguities may arise when one response includes examples but lacks clarity, while another is clear but does not provide examples; in such cases, clarity should take precedence. If both responses are equal in their use of examples, the one that offers more varied or insightful examples should be preferred.",
+      "accuracy": 0.4,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "conciseness",
+      "metric_description": "This metric assesses the conciseness of the response, which is vital for ensuring that the answer is direct and to the point without sacrificing necessary detail. A well-performing response will convey its message clearly and succinctly, avoiding unnecessary verbosity while still covering all critical aspects of the query. Positive indicators include straightforward language, elimination of redundant phrases, and a focus on delivering essential information efficiently. Conversely, poor performance is indicated by overly lengthy explanations, repetition of ideas, or inclusion of superfluous information that detracts from the main point. Boundary cases may arise when one response is concise but lacks detail, while another is detailed but verbose; in such cases, conciseness should take precedence. If both responses are equally concise or verbose, the one that maintains clarity while being concise should be preferred.",
+      "accuracy": 0.4,
+      "tested_on": 10
+    }
+  ],
+  "verified_metrics": [
+    {
+      "metric_name": "mathematical_accuracy",
+      "metric_description": "This metric evaluates the mathematical accuracy of the response, which is essential for \"reasoning_math\" queries as incorrect calculations or reasoning can lead to false conclusions. A response that scores high will present correct calculations, accurate interpretations of mathematical concepts, and valid solutions to the posed problems. Positive indicators include correct answers to calculations, proper use of mathematical terminology, and accurate representations of mathematical operations. On the other hand, negative indicators include incorrect calculations, misinterpretations of mathematical concepts, or presenting wrong answers without justification. Boundary cases may occur when one response contains minor calculation errors while the other is entirely incorrect; in such cases, the response with fewer errors should be favored. If both responses are equally accurate or inaccurate, a rater should prefer the one that provides more comprehensive reasoning or context for its calculations.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "logical_coherence",
+      "metric_description": "This metric assesses the logical coherence of the response to a \"reasoning_math\" query, which is crucial for ensuring that the reasoning process is clear and follows a rational progression. A response that performs well will exhibit a clear, step-by-step logical flow, where each statement builds on the previous one and leads to a valid conclusion. Positive indicators include structured arguments, appropriate use of mathematical principles, and clear explanations of reasoning behind each step. Conversely, poor performance is indicated by jumps in logic, unsupported claims, or conclusions that do not logically follow from the premises. Ambiguous situations may arise when both responses provide some logical reasoning but differ in clarity; in such cases, the response with the clearer structure should be favored. If both responses are equally coherent, a rater should prefer the one that includes more detailed explanations or examples to support its reasoning.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    }
+  ]
+}

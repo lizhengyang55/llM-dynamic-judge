@@ -1,0 +1,72 @@
+{
+  "dimension_id": "domain",
+  "group_label": "entertainment_culture",
+  "num_samples_in_group": 17,
+  "num_candidate_metrics": 8,
+  "num_verified_metrics": 2,
+  "accuracy_threshold": 0.9,
+  "all_candidates": [
+    {
+      "metric_name": "relevance_to_query",
+      "metric_description": "This metric assesses how directly the response addresses the specific query posed, which is essential in \"entertainment_culture\" contexts where user intent can vary widely. A high-scoring response will directly answer the question asked, such as providing a clear explanation of a joke or a detailed comparison of two films. Positive indicators include clear alignment with the query’s keywords and intent, as well as the inclusion of relevant examples or explanations. Conversely, responses that veer off-topic, provide irrelevant information, or fail to address the query directly will score poorly. In cases where both responses are somewhat relevant but one is more on-topic, the more focused response should be preferred. If both responses lack relevance, the one that at least attempts to relate to the query’s subject matter should be favored.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "clarity_and_coherence",
+      "metric_description": "This metric measures the clarity and coherence of the response, which is vital for ensuring that users can easily understand the information presented in \"entertainment_culture\" queries. A response that is logically structured, uses clear language, and flows well from one idea to the next will score highly. Positive indicators include well-formed sentences, appropriate transitions between points, and a clear overall structure that guides the reader through the response. Poor performance is marked by convoluted sentences, unclear references, or a lack of logical progression, which can confuse the reader. Ambiguities may arise when both responses are somewhat clear but one is noticeably better organized; in such cases, the more coherent response should be preferred. If both responses are equally unclear, the one with fewer grammatical errors or clearer phrasing should be favored.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "factual_accuracy",
+      "metric_description": "This metric evaluates the factual correctness of the information provided in the response, which is crucial for \"entertainment_culture\" queries as users often seek reliable details about films, games, and cultural references. A response scores well if it presents accurate data, such as the correct final movie of Grace Kelly or the IMDB ratings for films mentioned. Positive indicators include the use of verified facts, proper names, and relevant statistics that align with the query's intent. Conversely, a response that contains incorrect information, such as misidentifying a character from a video game or providing wrong ratings, would score poorly. Ambiguous situations may arise when both responses contain some accurate information but also notable inaccuracies; in such cases, the response with the greater proportion of accurate content should be favored. If both responses are equally inaccurate, a rater should consider which response at least attempts to provide context or explanation.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "engagement_factor",
+      "metric_description": "This metric assesses how engaging the response is, which is particularly important for \"entertainment_culture\" queries that seek to captivate the audience. A response that employs a lively tone, uses humor effectively, or invokes strong imagery will score highly, as it draws the reader in and maintains their interest. Positive indicators include the use of rhetorical questions, vivid descriptions, and a conversational style that resonates with the audience. Conversely, responses that are dry, overly technical, or lack any engaging elements will score poorly. Edge cases occur when both responses are engaging to some extent, but one employs more compelling language or storytelling techniques; in such cases, the more engaging response should be favored. If both responses fail to engage, the one that at least attempts to connect with the audience's emotions or interests should be preferred.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "depth_of_insight",
+      "metric_description": "This metric assesses the depth of insight provided in the response, which is important for \"entertainment_culture\" queries that may require nuanced understanding or analysis. A response that offers detailed explanations, explores underlying themes, or provides thoughtful commentary will score highly, demonstrating a sophisticated grasp of the subject matter. Positive indicators include in-depth analysis, well-supported arguments, and the exploration of multiple perspectives. Conversely, responses that offer superficial answers, lack depth, or fail to engage with the complexities of the topic will score poorly. Edge cases may arise when both responses provide some level of insight, but one is significantly more thorough; in such cases, the deeper response should be favored. If both responses lack depth, the one that at least attempts to provide some analysis or commentary should be preferred.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "stylistic_quality",
+      "metric_description": "This metric evaluates the stylistic quality of the response, which is particularly relevant for creative \"entertainment_culture\" queries that benefit from a strong voice or distinctive writing style. A high-scoring response will demonstrate effective use of language, including varied sentence structures, appropriate tone, and stylistic flair that enhances the overall reading experience. Positive indicators include the use of metaphor, alliteration, and a consistent voice that aligns with the query's intent. Poor performance is marked by monotonous language, lack of stylistic variation, or a tone that does not suit the context of the query. Ambiguities may arise when both responses exhibit some stylistic strength, but one is noticeably more polished or engaging; in such cases, the more stylistically refined response should be favored. If both responses are equally lacking in style, the one that at least shows an attempt at creative expression should be preferred.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "cultural_relevance",
+      "metric_description": "This metric evaluates the cultural relevance of the response, which is crucial for \"entertainment_culture\" queries that often reference current trends, popular media, or cultural phenomena. A high-scoring response will incorporate timely references, acknowledge contemporary discussions, or relate to widely recognized cultural artifacts. Positive indicators include mentions of trending movies, popular memes, or relevant social commentary that resonate with the audience. Poor performance is indicated by outdated references, lack of awareness of current events, or failure to connect with the cultural context of the query. Ambiguities may arise when both responses reference cultural elements, but one is more timely or pertinent; in such cases, the more relevant response should be favored. If both responses are equally outdated, the one that at least attempts to connect with the cultural context should be preferred.",
+      "accuracy": 0.5,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "creativity_and_originality",
+      "metric_description": "This metric evaluates the level of creativity and originality in the response, particularly important for queries that invite imaginative or artistic input, such as scriptwriting or humorous anecdotes. A response that presents unique ideas, engaging narratives, or original jokes will score highly, demonstrating inventive thinking and a fresh perspective. Positive indicators include unexpected twists, inventive language, or novel interpretations of familiar concepts. Poor performance is indicated by clichés, unoriginal content, or responses that simply rehash existing material without adding new insights. Edge cases may occur when both responses exhibit some level of creativity, but one significantly outshines the other in originality; in such cases, the more innovative response should be favored. If both responses lack creativity, a rater should consider which one at least attempts to present ideas in a slightly different way.",
+      "accuracy": 0.3,
+      "tested_on": 10
+    }
+  ],
+  "verified_metrics": [
+    {
+      "metric_name": "relevance_to_query",
+      "metric_description": "This metric assesses how directly the response addresses the specific query posed, which is essential in \"entertainment_culture\" contexts where user intent can vary widely. A high-scoring response will directly answer the question asked, such as providing a clear explanation of a joke or a detailed comparison of two films. Positive indicators include clear alignment with the query’s keywords and intent, as well as the inclusion of relevant examples or explanations. Conversely, responses that veer off-topic, provide irrelevant information, or fail to address the query directly will score poorly. In cases where both responses are somewhat relevant but one is more on-topic, the more focused response should be preferred. If both responses lack relevance, the one that at least attempts to relate to the query’s subject matter should be favored.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "clarity_and_coherence",
+      "metric_description": "This metric measures the clarity and coherence of the response, which is vital for ensuring that users can easily understand the information presented in \"entertainment_culture\" queries. A response that is logically structured, uses clear language, and flows well from one idea to the next will score highly. Positive indicators include well-formed sentences, appropriate transitions between points, and a clear overall structure that guides the reader through the response. Poor performance is marked by convoluted sentences, unclear references, or a lack of logical progression, which can confuse the reader. Ambiguities may arise when both responses are somewhat clear but one is noticeably better organized; in such cases, the more coherent response should be preferred. If both responses are equally unclear, the one with fewer grammatical errors or clearer phrasing should be favored.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "dimension_id": "capability",
+  "group_label": "multilingual",
+  "num_samples_in_group": 23,
+  "num_candidate_metrics": 8,
+  "num_verified_metrics": 7,
+  "accuracy_threshold": 0.9,
+  "all_candidates": [
+    {
+      "metric_name": "multilingual_accuracy",
+      "metric_description": "This metric assesses the accuracy of translations or interpretations provided in response to multilingual queries. It is crucial for ensuring that the AI assistant accurately conveys the meaning of phrases or sentences across different languages, which is essential for effective communication. Positive indicators include precise translations that maintain the original meaning, appropriate use of idiomatic expressions, and correct grammatical structures in the target language. Negative indicators include incorrect translations, loss of meaning, or awkward phrasing that does not align with native usage. Edge cases may arise when both responses provide partially accurate translations; in such situations, the response that captures the essence of the original meaning more effectively should be preferred. If both responses are equally accurate, the one that uses more natural language should be favored.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "cultural_relevance",
+      "metric_description": "This metric evaluates how well the response incorporates cultural context relevant to the languages involved in the query. Cultural relevance is vital for ensuring that the AI assistant's answers resonate with users from different linguistic backgrounds and do not inadvertently cause misunderstandings. Positive indicators include references to culturally significant concepts, idioms, or examples that align with the target language's cultural norms. Negative indicators include culturally inappropriate references, lack of context, or responses that ignore cultural nuances, leading to potential misinterpretations. In ambiguous cases where both responses show some cultural awareness, the one that integrates more specific and relevant cultural references should be preferred. If both responses are equally relevant, the one that demonstrates a deeper understanding of the cultural context should be favored.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "linguistic_diversity",
+      "metric_description": "This metric measures the variety of languages and dialects used in the responses to multilingual queries. Linguistic diversity is important as it reflects the assistant's capability to handle various languages effectively, catering to a broader audience. Positive indicators include the use of multiple languages in a single response, appropriate dialectal variations, and a clear distinction between languages when switching contexts. Negative indicators include the over-reliance on a single language, failure to recognize dialectal differences, or confusion between languages that could mislead the user. In cases where both responses exhibit similar levels of linguistic diversity, the response that introduces a wider range of languages or dialects should be preferred. If both responses are equally diverse, the one that maintains clarity in language switching should be favored.",
+      "accuracy": 0.4,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "contextual_clarity",
+      "metric_description": "This metric evaluates how clearly the AI assistant conveys context when responding to multilingual queries. Contextual clarity is essential for ensuring that users understand the relevance and implications of the response in relation to their query. Positive indicators include clear explanations of terms, well-structured responses that logically follow from the question, and the provision of relevant background information when necessary. Negative indicators include vague or ambiguous language, lack of relevant context, or responses that do not directly address the query. In ambiguous situations where both responses provide some context, the one that offers a more comprehensive background or clearer explanation should be preferred. If both responses are equally clear, the one that uses more straightforward language should be favored.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "response_relevance",
+      "metric_description": "This metric assesses the relevance of the response to the specific multilingual query posed. Response relevance is critical as it ensures that the assistant addresses the user's needs effectively without deviating from the topic. Positive indicators include direct answers to the query, appropriate examples that enhance understanding, and responses that align closely with the user's intent. Negative indicators include off-topic information, irrelevant examples, or responses that fail to address the query directly. In cases where both responses are relevant but differ in focus, the one that more closely aligns with the user's specific request should be preferred. If both responses are equally relevant, the one that provides a more comprehensive answer should be favored.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "grammatical_correctness",
+      "metric_description": "This metric evaluates the grammatical accuracy of the responses in the context of the languages used. Grammatical correctness is vital for ensuring that the AI assistant's responses are intelligible and professional, particularly in multilingual contexts where grammatical errors can lead to misunderstandings. Positive indicators include correct verb conjugations, proper sentence structure, and adherence to the grammatical rules of the target language. Negative indicators include grammatical errors, awkward phrasing, or sentences that are difficult to understand due to incorrect syntax. In ambiguous situations where both responses contain minor grammatical issues, the one with fewer errors should be preferred. If both responses have similar levels of grammatical correctness, the one that maintains a more formal tone should be favored.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "engagement_quality",
+      "metric_description": "This metric assesses the ability of the AI assistant's response to engage the user in a meaningful way, particularly in multilingual contexts. Engagement quality is important for fostering user interaction and ensuring that responses are not only informative but also interesting. Positive indicators include the use of engaging language, thought-provoking questions, or prompts that encourage further discussion or exploration of the topic. Negative indicators include monotonous or overly technical language, lack of interactive elements, or responses that do not invite user participation. In cases where both responses are equally engaging, the one that uses more creative or stimulating language should be preferred. If both responses are equally engaging, the one that offers more opportunities for user interaction should be favored.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "error_handling",
+      "metric_description": "This metric evaluates how well the AI assistant addresses errors or ambiguities in the user's multilingual query. Effective error handling is crucial for maintaining user trust and ensuring that the assistant provides useful guidance even when faced with unclear or incorrect input. Positive indicators include clarifying questions that seek to understand the user's intent, suggestions for rephrasing the query, or informative responses that address potential misunderstandings. Negative indicators include dismissive responses, failure to acknowledge ambiguities, or answers that do not attempt to clarify the user's intent. In ambiguous situations where both responses attempt to handle errors, the one that provides clearer guidance or more constructive suggestions should be preferred. If both responses are equally effective in error handling, the one that maintains a more supportive tone should be favored.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    }
+  ],
+  "verified_metrics": [
+    {
+      "metric_name": "multilingual_accuracy",
+      "metric_description": "This metric assesses the accuracy of translations or interpretations provided in response to multilingual queries. It is crucial for ensuring that the AI assistant accurately conveys the meaning of phrases or sentences across different languages, which is essential for effective communication. Positive indicators include precise translations that maintain the original meaning, appropriate use of idiomatic expressions, and correct grammatical structures in the target language. Negative indicators include incorrect translations, loss of meaning, or awkward phrasing that does not align with native usage. Edge cases may arise when both responses provide partially accurate translations; in such situations, the response that captures the essence of the original meaning more effectively should be preferred. If both responses are equally accurate, the one that uses more natural language should be favored.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "cultural_relevance",
+      "metric_description": "This metric evaluates how well the response incorporates cultural context relevant to the languages involved in the query. Cultural relevance is vital for ensuring that the AI assistant's answers resonate with users from different linguistic backgrounds and do not inadvertently cause misunderstandings. Positive indicators include references to culturally significant concepts, idioms, or examples that align with the target language's cultural norms. Negative indicators include culturally inappropriate references, lack of context, or responses that ignore cultural nuances, leading to potential misinterpretations. In ambiguous cases where both responses show some cultural awareness, the one that integrates more specific and relevant cultural references should be preferred. If both responses are equally relevant, the one that demonstrates a deeper understanding of the cultural context should be favored.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "contextual_clarity",
+      "metric_description": "This metric evaluates how clearly the AI assistant conveys context when responding to multilingual queries. Contextual clarity is essential for ensuring that users understand the relevance and implications of the response in relation to their query. Positive indicators include clear explanations of terms, well-structured responses that logically follow from the question, and the provision of relevant background information when necessary. Negative indicators include vague or ambiguous language, lack of relevant context, or responses that do not directly address the query. In ambiguous situations where both responses provide some context, the one that offers a more comprehensive background or clearer explanation should be preferred. If both responses are equally clear, the one that uses more straightforward language should be favored.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "response_relevance",
+      "metric_description": "This metric assesses the relevance of the response to the specific multilingual query posed. Response relevance is critical as it ensures that the assistant addresses the user's needs effectively without deviating from the topic. Positive indicators include direct answers to the query, appropriate examples that enhance understanding, and responses that align closely with the user's intent. Negative indicators include off-topic information, irrelevant examples, or responses that fail to address the query directly. In cases where both responses are relevant but differ in focus, the one that more closely aligns with the user's specific request should be preferred. If both responses are equally relevant, the one that provides a more comprehensive answer should be favored.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "grammatical_correctness",
+      "metric_description": "This metric evaluates the grammatical accuracy of the responses in the context of the languages used. Grammatical correctness is vital for ensuring that the AI assistant's responses are intelligible and professional, particularly in multilingual contexts where grammatical errors can lead to misunderstandings. Positive indicators include correct verb conjugations, proper sentence structure, and adherence to the grammatical rules of the target language. Negative indicators include grammatical errors, awkward phrasing, or sentences that are difficult to understand due to incorrect syntax. In ambiguous situations where both responses contain minor grammatical issues, the one with fewer errors should be preferred. If both responses have similar levels of grammatical correctness, the one that maintains a more formal tone should be favored.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "engagement_quality",
+      "metric_description": "This metric assesses the ability of the AI assistant's response to engage the user in a meaningful way, particularly in multilingual contexts. Engagement quality is important for fostering user interaction and ensuring that responses are not only informative but also interesting. Positive indicators include the use of engaging language, thought-provoking questions, or prompts that encourage further discussion or exploration of the topic. Negative indicators include monotonous or overly technical language, lack of interactive elements, or responses that do not invite user participation. In cases where both responses are equally engaging, the one that uses more creative or stimulating language should be preferred. If both responses are equally engaging, the one that offers more opportunities for user interaction should be favored.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "error_handling",
+      "metric_description": "This metric evaluates how well the AI assistant addresses errors or ambiguities in the user's multilingual query. Effective error handling is crucial for maintaining user trust and ensuring that the assistant provides useful guidance even when faced with unclear or incorrect input. Positive indicators include clarifying questions that seek to understand the user's intent, suggestions for rephrasing the query, or informative responses that address potential misunderstandings. Negative indicators include dismissive responses, failure to acknowledge ambiguities, or answers that do not attempt to clarify the user's intent. In ambiguous situations where both responses attempt to handle errors, the one that provides clearer guidance or more constructive suggestions should be preferred. If both responses are equally effective in error handling, the one that maintains a more supportive tone should be favored.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    }
+  ]
+}

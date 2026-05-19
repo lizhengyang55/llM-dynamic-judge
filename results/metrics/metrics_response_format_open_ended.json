@@ -1,0 +1,72 @@
+{
+  "dimension_id": "response_format",
+  "group_label": "open_ended",
+  "num_samples_in_group": 39,
+  "num_candidate_metrics": 8,
+  "num_verified_metrics": 2,
+  "accuracy_threshold": 0.9,
+  "all_candidates": [
+    {
+      "metric_name": "depth_of_insight",
+      "metric_description": "This metric measures the extent to which a response provides meaningful analysis or insight into the query, which is particularly important for complex or nuanced questions. Positive indicators include detailed explanations, critical thinking, and the ability to connect ideas in a way that reveals deeper understanding or implications. Responses that merely scratch the surface or provide superficial answers without analysis would score poorly on this metric. Ambiguous situations may arise when both responses offer some level of insight; in such cases, the one that delves deeper into the implications or provides a more thorough analysis should be preferred. Tie-breaking should favor the response that introduces unique perspectives or considerations that enhance the discussion.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "factual_accuracy",
+      "metric_description": "This metric assesses the correctness of the information presented in the response, which is essential for ensuring that the assistant provides reliable and trustworthy answers. Positive indicators include accurate facts, correct terminology, and adherence to established knowledge relevant to the query. Responses that contain inaccuracies, misinterpretations, or misleading information would indicate poor performance on this metric. Boundary cases may occur when one response is factually correct but lacks detail, while another is partially correct but more comprehensive; in such situations, the fully accurate response should be preferred. Tie-breaking should favor the response that presents information in a clearer and more understandable manner, even if it is less detailed.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "open_ended_relevance",
+      "metric_description": "This metric captures the degree to which a response addresses the specific content and intent of the open-ended query. It is crucial for ensuring that the response is not only related to the query but also provides meaningful engagement with its underlying themes. Positive indicators include direct references to key terms or concepts from the query, as well as the inclusion of relevant examples or explanations that expand on the query's context. Conversely, negative indicators involve responses that stray from the main topic, introduce unrelated information, or fail to engage with the query's intent, such as providing a generic answer that lacks specificity. Boundary cases may arise when both responses touch on relevant points but differ in depth; in such cases, the response that provides more nuanced insights should be preferred. Tie-breaking should favor the response that includes specific examples or elaborations that enhance understanding.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "creativity_and_originality",
+      "metric_description": "This metric assesses the uniqueness and inventiveness of the response, particularly important for queries that invite creative output, such as storytelling or poetry. Positive indicators include novel ideas, imaginative scenarios, and original phrasing that demonstrate a departure from conventional responses. Responses that simply rehash common themes or clichés, or that lack innovative thought, would indicate poor performance on this metric. Ambiguous situations may arise when both responses present creative elements but differ in execution; in such cases, the one with a more engaging or unexpected twist should be favored. Tie-breaking should prioritize responses that evoke a stronger emotional or intellectual reaction through their creativity.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "coherence_and_structure",
+      "metric_description": "This metric evaluates the logical flow and organization of the response, which is vital for ensuring that the answer is easily understandable and follows a clear line of reasoning. Positive indicators include well-structured responses with clear introductions, transitions, and conclusions, as well as coherent arguments that logically connect ideas. Negative indicators would be disjointed or rambling responses that lack a clear focus, where ideas are presented in a confusing order or without appropriate transitions. Boundary cases may occur when both responses are somewhat coherent but differ in clarity; in such instances, the response with a more straightforward and logical progression should be favored. Tie-breaking should be guided by the response that maintains clarity in its main points, even if the other response has more content.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "engagement_and_interactivity",
+      "metric_description": "This metric evaluates how well the response encourages further interaction or engagement from the user, which is particularly important for open-ended queries that invite dialogue. Positive indicators include questions posed to the user, prompts for further thought, or suggestions for follow-up actions that invite continued conversation. Responses that are purely declarative or lack an invitation for user interaction would score poorly on this metric. Ambiguous situations may arise when both responses engage the user to some extent; in such cases, the one that offers a more compelling or thought-provoking prompt should be favored. Tie-breaking should favor the response that creates a more inviting tone or atmosphere for continued discussion.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "language_and_style",
+      "metric_description": "This metric assesses the appropriateness and effectiveness of the language and stylistic choices made in the response, which is crucial for maintaining user interest and clarity. Positive indicators include varied sentence structure, appropriate vocabulary for the intended audience, and a tone that matches the query's context. Poor performance would be indicated by monotonous language, excessive jargon, or a tone that is inconsistent with the nature of the query. Boundary cases may occur when both responses exhibit strong language use but differ in style; in such situations, the one that better aligns with the expected style for the query should be preferred. Tie-breaking should favor the response that uses language more effectively to convey its message, enhancing readability and engagement.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "completeness",
+      "metric_description": "This metric evaluates the thoroughness of the response in addressing all aspects of the open-ended query, which is essential for ensuring that the user receives a comprehensive answer. Positive indicators include the inclusion of all relevant points, detailed explanations, and the anticipation of potential follow-up questions or concerns. Responses that are vague, omit key details, or fail to fully address the query would score poorly on this metric. Boundary cases may arise when both responses provide substantial information but miss some elements; in such cases, the response that covers a broader range of relevant points should be favored. Tie-breaking should prioritize the response that provides a more holistic view of the topic, even if it is slightly less detailed in some areas.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    }
+  ],
+  "verified_metrics": [
+    {
+      "metric_name": "depth_of_insight",
+      "metric_description": "This metric measures the extent to which a response provides meaningful analysis or insight into the query, which is particularly important for complex or nuanced questions. Positive indicators include detailed explanations, critical thinking, and the ability to connect ideas in a way that reveals deeper understanding or implications. Responses that merely scratch the surface or provide superficial answers without analysis would score poorly on this metric. Ambiguous situations may arise when both responses offer some level of insight; in such cases, the one that delves deeper into the implications or provides a more thorough analysis should be preferred. Tie-breaking should favor the response that introduces unique perspectives or considerations that enhance the discussion.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "factual_accuracy",
+      "metric_description": "This metric assesses the correctness of the information presented in the response, which is essential for ensuring that the assistant provides reliable and trustworthy answers. Positive indicators include accurate facts, correct terminology, and adherence to established knowledge relevant to the query. Responses that contain inaccuracies, misinterpretations, or misleading information would indicate poor performance on this metric. Boundary cases may occur when one response is factually correct but lacks detail, while another is partially correct but more comprehensive; in such situations, the fully accurate response should be preferred. Tie-breaking should favor the response that presents information in a clearer and more understandable manner, even if it is less detailed.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    }
+  ]
+}

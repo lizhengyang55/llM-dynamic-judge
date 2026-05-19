@@ -1,0 +1,66 @@
+{
+  "dimension_id": "difficulty",
+  "group_label": "hard",
+  "num_samples_in_group": 75,
+  "num_candidate_metrics": 8,
+  "num_verified_metrics": 1,
+  "accuracy_threshold": 0.9,
+  "all_candidates": [
+    {
+      "metric_name": "logical_coherence",
+      "metric_description": "This metric assesses the logical coherence of the response, which is crucial for \"hard\" queries that often involve complex reasoning or problem-solving. A response that demonstrates logical coherence will have a clear, structured argument or narrative that follows a logical progression, making it easy for the reader to follow. Positive indicators include well-defined premises leading to a conclusion, appropriate use of logical connectors, and the avoidance of contradictions. Conversely, responses that lack logical coherence may present disjointed ideas, fail to connect premises to conclusions, or contain internal contradictions that confuse the reader. Ambiguous situations may arise when both responses present some logical structure but differ in clarity; in such cases, the response with clearer connections and fewer logical leaps should be preferred. If both responses are equally coherent, the one that offers a more comprehensive exploration of the topic should be favored.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "depth_of_explanation",
+      "metric_description": "This metric evaluates the depth of explanation provided in the response, which is particularly important for \"hard\" queries that require nuanced understanding and detailed elaboration. A well-performing response will include thorough explanations, relevant examples, and a demonstration of the underlying principles or concepts at play. Positive indicators include the inclusion of multiple facets of the topic, detailed examples that illustrate points made, and the anticipation of potential follow-up questions. In contrast, a poor response may offer superficial treatment of the subject, omit critical details, or provide vague explanations that leave the reader with unanswered questions. Edge cases may occur when two responses provide similar levels of detail; in such instances, the response that organizes information more logically or presents it in a more engaging manner should be prioritized. If both responses are equally detailed, the one that includes more relevant examples should be favored.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "technical_accuracy",
+      "metric_description": "This metric measures the technical accuracy of the response, which is essential for \"hard\" queries that involve specialized knowledge or technical content. A response that scores well will provide correct and precise information, including accurate definitions, formulas, or code snippets as applicable to the query. Positive indicators include the correct application of technical terms, accurate calculations, and adherence to relevant conventions or standards. Conversely, responses that exhibit technical inaccuracies may include incorrect definitions, flawed calculations, or misapplication of concepts, which can mislead the reader. Boundary cases may arise when one response is more accurate in some aspects but less so in others; in these cases, the response with the greater overall accuracy should be favored. If both responses are equally accurate, the one that provides additional context or clarification should be preferred.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "creativity_and_originality",
+      "metric_description": "This metric assesses the creativity and originality of the response, which is particularly relevant for \"hard\" queries that invite imaginative or unique solutions, such as storytelling or innovative problem-solving. A high-scoring response will present novel ideas, unique perspectives, or creative approaches that distinguish it from typical answers. Positive indicators include unexpected plot developments in creative writing, innovative coding solutions, or original interpretations of complex concepts. Poor performance is indicated by clichés, predictable responses, or a lack of uniqueness in the approach taken. Ambiguous situations may occur when both responses are creative but in different ways; in such cases, the one that offers a more compelling narrative or innovative solution should be preferred. If both responses are equally creative, the one that engages the reader more effectively should be favored.",
+      "accuracy": 0.5,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "relevance_to_query",
+      "metric_description": "This metric evaluates the relevance of the response to the specific query, which is crucial for ensuring that the answer addresses the question posed effectively. A response that performs well will directly relate to the query's content, maintaining focus on the key issues and avoiding tangential information. Positive indicators include the direct addressing of the query's main points, the use of relevant terminology, and the inclusion of information that specifically answers the question. Poor performance is indicated by irrelevant digressions, failure to address the main question, or inclusion of information that does not pertain to the query. Boundary cases may arise when both responses are relevant but differ in focus; in such cases, the response that more comprehensively addresses the query should be favored. If both responses are equally relevant, the one that presents the information in a more structured manner should be preferred.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "clarity_and_conciseness",
+      "metric_description": "This metric assesses the clarity and conciseness of the response, which is essential for \"hard\" queries that may involve complex information requiring straightforward presentation. A high-scoring response will communicate ideas clearly, using straightforward language and avoiding unnecessary jargon or overly complex sentences. Positive indicators include clear organization, straightforward explanations, and the avoidance of verbosity. Conversely, responses that lack clarity may use convoluted language, present ideas in a confusing manner, or include excessive detail that obscures the main point. Ambiguous situations may arise when both responses are clear but differ in conciseness; in such cases, the more concise response should be favored. If both responses are equally clear and concise, the one that employs more effective visual organization (e.g., bullet points, headings) should be preferred.",
+      "accuracy": 0.3,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "engagement_and_style",
+      "metric_description": "This metric evaluates the engagement and stylistic quality of the response, which is particularly relevant for \"hard\" queries that allow for creative expression or narrative elements. A well-performing response will employ an engaging writing style, utilizing techniques such as vivid descriptions, varied sentence structures, and an appropriate tone that resonates with the intended audience. Positive indicators include the use of figurative language, compelling narrative arcs, and a tone that matches the query's context. Poor performance is indicated by dull or monotonous writing, lack of stylistic flair, or an inappropriate tone that detracts from the content. Boundary cases may arise when both responses are stylistically engaging but differ in approach; in such cases, the response that maintains a more consistent tone should be favored. If both responses are equally engaging, the one that utilizes more creative language should be preferred.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "completeness_of_response",
+      "metric_description": "This metric assesses the completeness of the response, which is vital for \"hard\" queries that often require multifaceted answers. A high-scoring response will address all parts of the query comprehensively, ensuring that no significant aspect is overlooked. Positive indicators include the thorough coverage of all elements of the query, the inclusion of additional relevant information, and the provision of examples or explanations that enhance understanding. Poor performance is indicated by significant omissions, partial answers that leave key questions unaddressed, or a lack of supporting details that weaken the response. Ambiguous situations may arise when both responses cover most aspects but differ in thoroughness; in such cases, the more comprehensive response should be favored. If both responses are equally complete, the one that presents information in a more logical sequence should be preferred.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    }
+  ],
+  "verified_metrics": [
+    {
+      "metric_name": "logical_coherence",
+      "metric_description": "This metric assesses the logical coherence of the response, which is crucial for \"hard\" queries that often involve complex reasoning or problem-solving. A response that demonstrates logical coherence will have a clear, structured argument or narrative that follows a logical progression, making it easy for the reader to follow. Positive indicators include well-defined premises leading to a conclusion, appropriate use of logical connectors, and the avoidance of contradictions. Conversely, responses that lack logical coherence may present disjointed ideas, fail to connect premises to conclusions, or contain internal contradictions that confuse the reader. Ambiguous situations may arise when both responses present some logical structure but differ in clarity; in such cases, the response with clearer connections and fewer logical leaps should be preferred. If both responses are equally coherent, the one that offers a more comprehensive exploration of the topic should be favored.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    }
+  ]
+}

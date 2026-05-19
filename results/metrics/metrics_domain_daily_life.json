@@ -1,0 +1,66 @@
+{
+  "dimension_id": "domain",
+  "group_label": "daily_life",
+  "num_samples_in_group": 13,
+  "num_candidate_metrics": 8,
+  "num_verified_metrics": 1,
+  "accuracy_threshold": 0.9,
+  "all_candidates": [
+    {
+      "metric_name": "clarity_of_expression",
+      "metric_description": "This metric captures the clarity and coherence of the response's language and structure, which is crucial for \"daily_life\" queries where users seek straightforward guidance or information. A response that performs well will use clear, concise language, avoiding jargon or overly complex sentences, and will logically organize information, making it easy for the reader to follow. Positive indicators include well-structured sentences, appropriate use of paragraphs, and a direct answer to the query. Conversely, responses that are convoluted, use ambiguous language, or lack logical flow will score poorly on this metric. Boundary cases may arise when both responses are clear but differ in detail; in such instances, the one with a more straightforward structure should be preferred. Tie-breaking may occur if one response is slightly clearer in its phrasing or organization, even if both are generally understandable.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "relevance_to_query",
+      "metric_description": "This metric assesses how directly the response addresses the specific query posed, which is essential for ensuring that the user receives pertinent information or advice. A high-scoring response will stay focused on the main question, providing relevant details and avoiding unnecessary tangents or irrelevant information. Positive indicators include direct answers, relevant examples, and a focus on the user's needs as articulated in the query. Poor performance is indicated by responses that diverge from the main topic, include unrelated information, or fail to answer the question at all. In boundary cases where both responses are somewhat relevant, the one that aligns more closely with the user's intent should be favored. Tie-breaking can occur if one response includes specific details that enhance relevance, such as contextually appropriate examples or suggestions.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "factual_accuracy",
+      "metric_description": "This metric evaluates the accuracy of the information provided in the response, which is vital for \"daily_life\" queries where users rely on factual data to make decisions or solve problems. A response that scores well will present correct facts, figures, or advice that can be verified against reliable sources. Positive indicators include accurate statistics, correct definitions, and reliable recommendations. Conversely, inaccuracies, misleading statements, or unsupported claims will significantly lower the score. Boundary cases may involve responses where one contains minor inaccuracies while the other is mostly correct; here, the overall accuracy of the majority of the content should guide the decision. Tie-breaking should favor the response that presents the most accurate and verifiable information, even if both contain some errors.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "completeness_of_response",
+      "metric_description": "This metric measures the extent to which the response fully addresses all aspects of the query, which is crucial for ensuring that users receive comprehensive guidance. A response that excels will cover all necessary points, providing detailed explanations or steps as required by the query. Positive indicators include thoroughness in addressing follow-up questions or potential concerns, as well as providing additional context when relevant. Poor performance is indicated by vague answers, missing critical information, or failing to address significant components of the query. Boundary cases may occur when both responses are somewhat complete; in such cases, the one that offers more depth or additional relevant information should be preferred. Tie-breaking can occur if one response anticipates user needs or questions not explicitly stated in the query.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "tone_and_style",
+      "metric_description": "This metric evaluates the appropriateness of the tone and style of the response, which is important for maintaining user engagement and ensuring that the information is conveyed in a relatable manner. A high-scoring response will use a tone that matches the context of the query, whether it be formal, casual, or empathetic, and will employ a style that resonates with the user's expectations. Positive indicators include a friendly or supportive tone for personal queries and a professional tone for factual inquiries. Poor performance is indicated by a tone that feels off-putting, overly formal, or dismissive, as well as stylistic choices that confuse or alienate the user. Boundary cases may arise when both responses have appropriate tones but differ in style; in such instances, the one that feels more natural or relatable should be favored. Tie-breaking can occur if one response better matches the emotional context of the query.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "engagement_and_interactivity",
+      "metric_description": "This metric assesses the degree to which the response encourages user engagement or interaction, which is particularly relevant for \"daily_life\" queries where users may benefit from a more conversational approach. A high-scoring response will invite further questions, provide prompts for user reflection, or suggest actionable next steps. Positive indicators include phrases that encourage dialogue, questions that invite user input, and suggestions for follow-up actions. Poor performance is indicated by a lack of engagement, such as a purely informational tone without any interactive elements. Boundary cases may occur when both responses are somewhat engaging; in such cases, the one that offers more opportunities for user interaction should be preferred. Tie-breaking can occur if one response includes specific questions or prompts that directly relate to the user’s situation.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "cultural_sensitivity",
+      "metric_description": "This metric evaluates the degree to which the response demonstrates awareness and respect for diverse cultural perspectives, which is particularly important in \"daily_life\" queries that may involve personal or social issues. A response that scores well will use inclusive language, acknowledge cultural differences, and avoid stereotypes or assumptions. Positive indicators include references to cultural practices, sensitivity to diverse viewpoints, and language that respects all users. Poor performance is indicated by culturally insensitive remarks, assumptions based on stereotypes, or a lack of acknowledgment of diversity. Boundary cases may arise when both responses are culturally aware but differ in depth; in such cases, the response that provides more nuanced understanding or examples should be favored. Tie-breaking can occur if one response better reflects an understanding of the cultural context relevant to the query.",
+      "accuracy": 0.3,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "creativity_and_originality",
+      "metric_description": "This metric measures the creativity and originality of the response, which is important for \"daily_life\" queries that may benefit from unique perspectives or innovative solutions. A high-scoring response will offer fresh ideas, creative suggestions, or novel approaches to the query, distinguishing it from more formulaic responses. Positive indicators include imaginative solutions, unique examples, and a distinct voice that captures the user's interest. Poor performance is indicated by generic responses, clichés, or a lack of innovative thinking. Boundary cases may occur when both responses are creative but differ in execution; in such instances, the one that presents a more compelling or feasible idea should be favored. Tie-breaking can occur if one response includes a particularly innovative suggestion that stands out as both practical and engaging.",
+      "accuracy": 0.4,
+      "tested_on": 10
+    }
+  ],
+  "verified_metrics": [
+    {
+      "metric_name": "tone_and_style",
+      "metric_description": "This metric evaluates the appropriateness of the tone and style of the response, which is important for maintaining user engagement and ensuring that the information is conveyed in a relatable manner. A high-scoring response will use a tone that matches the context of the query, whether it be formal, casual, or empathetic, and will employ a style that resonates with the user's expectations. Positive indicators include a friendly or supportive tone for personal queries and a professional tone for factual inquiries. Poor performance is indicated by a tone that feels off-putting, overly formal, or dismissive, as well as stylistic choices that confuse or alienate the user. Boundary cases may arise when both responses have appropriate tones but differ in style; in such instances, the one that feels more natural or relatable should be favored. Tie-breaking can occur if one response better matches the emotional context of the query.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    }
+  ]
+}

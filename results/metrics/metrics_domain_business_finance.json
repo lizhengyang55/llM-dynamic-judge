@@ -1,0 +1,96 @@
+{
+  "dimension_id": "domain",
+  "group_label": "business_finance",
+  "num_samples_in_group": 11,
+  "num_candidate_metrics": 8,
+  "num_verified_metrics": 6,
+  "accuracy_threshold": 0.9,
+  "all_candidates": [
+    {
+      "metric_name": "factual_accuracy",
+      "metric_description": "This metric evaluates the factual correctness of the information provided in responses to \"business_finance\" queries. It is crucial because financial decisions often rely on accurate data and information, and inaccuracies can lead to significant consequences for users. Positive indicators of high factual accuracy include precise financial terminology, correct numerical data, and references to reputable sources or studies. Conversely, negative indicators include incorrect figures, misleading statements, or vague assertions without supporting evidence. Boundary cases may arise when both responses contain some accurate information but also significant errors; in such cases, the response with the least misleading content should be preferred. Tie-breaking should favor the response that provides the most reliable and verifiable data, even if it is less comprehensive.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "relevance",
+      "metric_description": "This metric assesses how well the content of the response aligns with the specific query posed, focusing on the relevance of the information provided. In \"business_finance\" contexts, relevance is vital because users seek targeted advice or insights that directly address their inquiries. Positive indicators include direct answers to the questions asked, use of key terms from the query, and a clear focus on the topic without digressions. Negative indicators include off-topic information, vague generalities, or failure to address the specific aspects of the query. Boundary cases may occur when both responses are somewhat relevant but one is more focused; in such instances, the more targeted response should be preferred. Tie-breaking should favor the response that uses the specific language or terms from the query more effectively.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "clarity",
+      "metric_description": "This metric evaluates the clarity of the response, which is essential for ensuring that complex financial concepts are easily understood by users. Clarity is particularly important in \"business_finance\" queries, where users may not have advanced knowledge of the subject matter. Positive indicators of clarity include well-structured responses, the use of simple language, and logical flow of ideas. Negative indicators include convoluted sentences, excessive jargon without explanations, and a lack of organization that makes the response difficult to follow. Boundary cases may arise when both responses are somewhat clear but one is significantly easier to understand; in such cases, the clearer response should be preferred. Tie-breaking should favor the response that provides definitions or explanations for technical terms used.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "completeness",
+      "metric_description": "This metric measures the completeness of the response in addressing all aspects of the query, which is crucial in \"business_finance\" to provide users with a comprehensive understanding of their inquiries. A complete response should cover all relevant points, including background information, detailed explanations, and any necessary context. Positive indicators include thoroughness in addressing the query, inclusion of multiple perspectives, and consideration of various factors related to the question. Negative indicators include missing key information, overly brief responses that fail to elaborate, or ignoring important nuances. Boundary cases may occur when one response is more detailed but misses a crucial point, while another is less detailed but addresses all points; in such cases, the more thorough response should be preferred. Tie-breaking should favor the response that anticipates follow-up questions or concerns.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "engagement",
+      "metric_description": "This metric evaluates the engagement level of the response, which is important for keeping users interested and encouraging further exploration of financial topics. In \"business_finance\" queries, an engaging response can enhance user experience and retention. Positive indicators include a conversational tone, the use of relatable examples, and questions that invite further discussion. Negative indicators include dry, monotonous language, lack of interaction, or failure to connect with the user's potential interests. Boundary cases may arise when both responses are somewhat engaging but differ in style; in such cases, the response with a more inviting tone should be preferred. Tie-breaking should favor the response that offers actionable insights or suggestions for further reading.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "conciseness",
+      "metric_description": "This metric assesses the conciseness of the response, which is crucial in \"business_finance\" to convey information efficiently without overwhelming the user. A concise response delivers essential information in a straightforward manner, avoiding unnecessary elaboration. Positive indicators include brevity, elimination of redundant phrases, and direct answers to the query. Negative indicators include overly verbose explanations, repetition of ideas, or inclusion of irrelevant details that detract from the main point. Boundary cases may arise when one response is concise but lacks detail, while another is longer but contains necessary information; in such cases, the more concise yet informative response should be preferred. Tie-breaking should favor the response that maintains clarity while being succinct.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "logical_coherence",
+      "metric_description": "This metric evaluates the logical coherence of the response, which is vital for ensuring that the reasoning and arguments presented are sound and well-structured in \"business_finance\" discussions. A coherent response should follow a logical progression, with clear connections between ideas and conclusions. Positive indicators include well-defined arguments, appropriate use of evidence to support claims, and clear transitions between points. Negative indicators include contradictions, unclear reasoning, or abrupt shifts in topic that confuse the reader. Boundary cases may arise when both responses are logically coherent but differ in the strength of their arguments; in such cases, the response with stronger supporting evidence should be preferred. Tie-breaking should favor the response that presents a more compelling rationale for its conclusions.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "technical_accuracy",
+      "metric_description": "This metric assesses the technical accuracy of the financial concepts and methodologies presented in the response, which is particularly important in \"business_finance\" due to the complexity and specificity of the subject matter. Technical accuracy ensures that the response correctly applies financial principles and calculations. Positive indicators include correct application of financial formulas, accurate description of financial instruments, and precise use of industry terminology. Negative indicators include misapplication of formulas, incorrect definitions of financial terms, or failure to adhere to established financial practices. Boundary cases may arise when both responses contain technical inaccuracies but one is less egregious; in such cases, the response with fewer errors should be preferred. Tie-breaking should favor the response that provides additional context or clarification for technical terms used.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    }
+  ],
+  "verified_metrics": [
+    {
+      "metric_name": "factual_accuracy",
+      "metric_description": "This metric evaluates the factual correctness of the information provided in responses to \"business_finance\" queries. It is crucial because financial decisions often rely on accurate data and information, and inaccuracies can lead to significant consequences for users. Positive indicators of high factual accuracy include precise financial terminology, correct numerical data, and references to reputable sources or studies. Conversely, negative indicators include incorrect figures, misleading statements, or vague assertions without supporting evidence. Boundary cases may arise when both responses contain some accurate information but also significant errors; in such cases, the response with the least misleading content should be preferred. Tie-breaking should favor the response that provides the most reliable and verifiable data, even if it is less comprehensive.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "relevance",
+      "metric_description": "This metric assesses how well the content of the response aligns with the specific query posed, focusing on the relevance of the information provided. In \"business_finance\" contexts, relevance is vital because users seek targeted advice or insights that directly address their inquiries. Positive indicators include direct answers to the questions asked, use of key terms from the query, and a clear focus on the topic without digressions. Negative indicators include off-topic information, vague generalities, or failure to address the specific aspects of the query. Boundary cases may occur when both responses are somewhat relevant but one is more focused; in such instances, the more targeted response should be preferred. Tie-breaking should favor the response that uses the specific language or terms from the query more effectively.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "clarity",
+      "metric_description": "This metric evaluates the clarity of the response, which is essential for ensuring that complex financial concepts are easily understood by users. Clarity is particularly important in \"business_finance\" queries, where users may not have advanced knowledge of the subject matter. Positive indicators of clarity include well-structured responses, the use of simple language, and logical flow of ideas. Negative indicators include convoluted sentences, excessive jargon without explanations, and a lack of organization that makes the response difficult to follow. Boundary cases may arise when both responses are somewhat clear but one is significantly easier to understand; in such cases, the clearer response should be preferred. Tie-breaking should favor the response that provides definitions or explanations for technical terms used.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "completeness",
+      "metric_description": "This metric measures the completeness of the response in addressing all aspects of the query, which is crucial in \"business_finance\" to provide users with a comprehensive understanding of their inquiries. A complete response should cover all relevant points, including background information, detailed explanations, and any necessary context. Positive indicators include thoroughness in addressing the query, inclusion of multiple perspectives, and consideration of various factors related to the question. Negative indicators include missing key information, overly brief responses that fail to elaborate, or ignoring important nuances. Boundary cases may occur when one response is more detailed but misses a crucial point, while another is less detailed but addresses all points; in such cases, the more thorough response should be preferred. Tie-breaking should favor the response that anticipates follow-up questions or concerns.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "engagement",
+      "metric_description": "This metric evaluates the engagement level of the response, which is important for keeping users interested and encouraging further exploration of financial topics. In \"business_finance\" queries, an engaging response can enhance user experience and retention. Positive indicators include a conversational tone, the use of relatable examples, and questions that invite further discussion. Negative indicators include dry, monotonous language, lack of interaction, or failure to connect with the user's potential interests. Boundary cases may arise when both responses are somewhat engaging but differ in style; in such cases, the response with a more inviting tone should be preferred. Tie-breaking should favor the response that offers actionable insights or suggestions for further reading.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "logical_coherence",
+      "metric_description": "This metric evaluates the logical coherence of the response, which is vital for ensuring that the reasoning and arguments presented are sound and well-structured in \"business_finance\" discussions. A coherent response should follow a logical progression, with clear connections between ideas and conclusions. Positive indicators include well-defined arguments, appropriate use of evidence to support claims, and clear transitions between points. Negative indicators include contradictions, unclear reasoning, or abrupt shifts in topic that confuse the reader. Boundary cases may arise when both responses are logically coherent but differ in the strength of their arguments; in such cases, the response with stronger supporting evidence should be preferred. Tie-breaking should favor the response that presents a more compelling rationale for its conclusions.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "dimension_id": "task_type",
+  "group_label": "translation_language",
+  "num_samples_in_group": 11,
+  "num_candidate_metrics": 8,
+  "num_verified_metrics": 5,
+  "accuracy_threshold": 0.9,
+  "all_candidates": [
+    {
+      "metric_name": "translation_accuracy",
+      "metric_description": "This metric captures the precision and correctness of the translated content in \"translation_language\" queries. It is crucial because accurate translation ensures that the intended meaning and nuances of the original text are preserved in the target language. Positive indicators include the faithful reproduction of idiomatic expressions, grammatical structures, and cultural references that match the source language. Conversely, negative indicators include mistranslations, omissions of key concepts, or the introduction of incorrect information that alters the meaning. Boundary cases may arise when both responses contain some accurate translations but differ in completeness; in such cases, the response with fewer omissions should be favored. If both responses are equally accurate, the rater should prefer the one that maintains the original tone and style more effectively.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "linguistic_fluidity",
+      "metric_description": "This metric evaluates the naturalness and fluency of the translated text in the target language. It is important because a translation should read as if it were originally written in the target language, avoiding awkward phrasing or unnatural syntax. Positive indicators include the use of appropriate idioms, smooth transitions between sentences, and a coherent overall flow that engages the reader. Negative indicators, on the other hand, consist of choppy sentence structures, overly literal translations that disrupt the reading experience, or awkward word choices that do not fit the context. Boundary cases may occur when both responses demonstrate a similar level of fluidity; in such instances, the response with better adherence to the conventions of the target language should be preferred. If both responses are equally fluid, the one that aligns more closely with the style of the original text should be favored.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "contextual_relevance",
+      "metric_description": "This metric assesses how well the translation captures the context and intent of the original query. It is essential as translations must not only convey words but also the underlying meaning and situational context. Positive indicators include the translation's ability to reflect cultural nuances, tone, and the specific context of the original text. Negative indicators include translations that misinterpret the context, leading to responses that are irrelevant or inappropriate for the intended audience. Boundary cases may arise when both responses capture some contextual elements but differ in their interpretation; in such cases, the response that aligns more closely with the overall context of the original query should be preferred. If both responses are equally relevant, the rater should consider which response provides a more comprehensive understanding of the context.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "grammatical_correctness",
+      "metric_description": "This metric evaluates the grammatical accuracy of the translated response in the target language. It is important because grammatical errors can undermine the credibility and clarity of the translation. Positive indicators include correct verb conjugations, proper noun-adjective agreement, and adherence to the syntactical rules of the target language. Negative indicators consist of grammatical mistakes such as subject-verb agreement errors, incorrect tense usage, or sentence fragments that disrupt comprehension. Boundary cases may occur when both responses contain minor grammatical errors; in such cases, the response with fewer errors should be preferred. If both responses are equally correct, the rater should favor the one that uses more complex grammatical structures appropriately.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "cultural_sensitivity",
+      "metric_description": "This metric assesses the degree to which the translation respects and reflects the cultural nuances of the target language. It is crucial because translations that ignore cultural context can lead to misunderstandings or offense. Positive indicators include the appropriate use of culturally relevant expressions, avoidance of culturally insensitive language, and the successful adaptation of idioms or references to fit the target audience. Negative indicators include the use of phrases that may be offensive or confusing in the target culture or the failure to adapt culturally specific references. Boundary cases may arise when both responses demonstrate some level of cultural sensitivity but differ in their effectiveness; in such instances, the response that better aligns with the target culture's norms should be preferred. If both responses are equally sensitive, the one that provides a richer cultural context should be favored.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "completeness",
+      "metric_description": "This metric evaluates the extent to which the translation addresses all components of the original query. It is important because incomplete translations can lead to misunderstandings or a lack of necessary information. Positive indicators include the inclusion of all relevant details, such as context, tone, and specific terminology from the original text. Negative indicators consist of omissions where key elements are missing, leading to an incomplete understanding of the original message. Boundary cases may occur when both responses are partially complete; in such cases, the response that includes the most critical elements should be preferred. If both responses are equally complete, the rater should favor the one that presents the information in a more organized manner.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "stylistic_consistency",
+      "metric_description": "This metric assesses the degree to which the translation maintains the stylistic elements of the original text. It is essential because translations should reflect the same tone, formality, and stylistic choices as the source material. Positive indicators include the use of similar vocabulary levels, sentence structures, and stylistic devices that mirror the original text's style. Negative indicators include significant deviations in tone, such as overly casual language in a formal context or vice versa, as well as inconsistent use of stylistic elements. Boundary cases may arise when both responses are stylistically consistent but differ in minor details; in such instances, the response that more closely mirrors the original style should be preferred. If both responses are equally consistent, the one that enhances the original style without altering its essence should be favored.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "user_intent_alignment",
+      "metric_description": "This metric evaluates how well the translation aligns with the user's intent as expressed in the original query. It is crucial because translations should not only convey meaning but also fulfill the user's specific request or purpose. Positive indicators include a clear understanding of the user's needs, such as providing a translation that is appropriate for the intended audience or context. Negative indicators consist of translations that misinterpret the user's intent, leading to responses that are irrelevant or unhelpful. Boundary cases may arise when both responses partially align with user intent; in such cases, the response that more accurately reflects the user's original request should be preferred. If both responses are equally aligned, the rater should consider which response offers a more comprehensive fulfillment of the user's intent.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    }
+  ],
+  "verified_metrics": [
+    {
+      "metric_name": "translation_accuracy",
+      "metric_description": "This metric captures the precision and correctness of the translated content in \"translation_language\" queries. It is crucial because accurate translation ensures that the intended meaning and nuances of the original text are preserved in the target language. Positive indicators include the faithful reproduction of idiomatic expressions, grammatical structures, and cultural references that match the source language. Conversely, negative indicators include mistranslations, omissions of key concepts, or the introduction of incorrect information that alters the meaning. Boundary cases may arise when both responses contain some accurate translations but differ in completeness; in such cases, the response with fewer omissions should be favored. If both responses are equally accurate, the rater should prefer the one that maintains the original tone and style more effectively.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "contextual_relevance",
+      "metric_description": "This metric assesses how well the translation captures the context and intent of the original query. It is essential as translations must not only convey words but also the underlying meaning and situational context. Positive indicators include the translation's ability to reflect cultural nuances, tone, and the specific context of the original text. Negative indicators include translations that misinterpret the context, leading to responses that are irrelevant or inappropriate for the intended audience. Boundary cases may arise when both responses capture some contextual elements but differ in their interpretation; in such cases, the response that aligns more closely with the overall context of the original query should be preferred. If both responses are equally relevant, the rater should consider which response provides a more comprehensive understanding of the context.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "grammatical_correctness",
+      "metric_description": "This metric evaluates the grammatical accuracy of the translated response in the target language. It is important because grammatical errors can undermine the credibility and clarity of the translation. Positive indicators include correct verb conjugations, proper noun-adjective agreement, and adherence to the syntactical rules of the target language. Negative indicators consist of grammatical mistakes such as subject-verb agreement errors, incorrect tense usage, or sentence fragments that disrupt comprehension. Boundary cases may occur when both responses contain minor grammatical errors; in such cases, the response with fewer errors should be preferred. If both responses are equally correct, the rater should favor the one that uses more complex grammatical structures appropriately.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "completeness",
+      "metric_description": "This metric evaluates the extent to which the translation addresses all components of the original query. It is important because incomplete translations can lead to misunderstandings or a lack of necessary information. Positive indicators include the inclusion of all relevant details, such as context, tone, and specific terminology from the original text. Negative indicators consist of omissions where key elements are missing, leading to an incomplete understanding of the original message. Boundary cases may occur when both responses are partially complete; in such cases, the response that includes the most critical elements should be preferred. If both responses are equally complete, the rater should favor the one that presents the information in a more organized manner.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "user_intent_alignment",
+      "metric_description": "This metric evaluates how well the translation aligns with the user's intent as expressed in the original query. It is crucial because translations should not only convey meaning but also fulfill the user's specific request or purpose. Positive indicators include a clear understanding of the user's needs, such as providing a translation that is appropriate for the intended audience or context. Negative indicators consist of translations that misinterpret the user's intent, leading to responses that are irrelevant or unhelpful. Boundary cases may arise when both responses partially align with user intent; in such cases, the response that more accurately reflects the user's original request should be preferred. If both responses are equally aligned, the rater should consider which response offers a more comprehensive fulfillment of the user's intent.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "dimension_id": "task_type",
+  "group_label": "conversation_roleplay",
+  "num_samples_in_group": 9,
+  "num_candidate_metrics": 8,
+  "num_verified_metrics": 2,
+  "accuracy_threshold": 0.9,
+  "all_candidates": [
+    {
+      "metric_name": "engagement_level",
+      "metric_description": "This metric assesses how engaging and interactive the AI assistant's response is within the context of \"conversation_roleplay\" queries. An engaging response should invite further interaction, encouraging the user to continue the conversation through questions, humor, or relatable content. Positive indicators include the use of open-ended questions, humorous remarks, or references to shared experiences that prompt user engagement. Negative indicators might consist of overly brief or dismissive responses, lack of follow-up prompts, or a tone that feels flat or uninviting. Ambiguity may arise when both responses are engaging but differ in style; in such cases, raters should evaluate which response better aligns with the user's expectations based on the query. If both responses are equally engaging, the rater should prefer the one that demonstrates greater creativity or originality in fostering interaction.",
+      "accuracy": 0.8889,
+      "tested_on": 9
+    },
+    {
+      "metric_name": "contextual_relevance",
+      "metric_description": "This metric measures how well the AI assistant's response aligns with the context and content of the user's query in \"conversation_roleplay.\" Contextual relevance is vital for ensuring that the assistant's reply is appropriate and meaningful within the scenario presented. Positive indicators include direct references to elements from the query, logical progression of the conversation, and responses that address the user's implied needs or emotions. Negative indicators may involve responses that stray off-topic, introduce unrelated information, or fail to acknowledge critical aspects of the user's scenario. Boundary cases can occur when a response partially addresses the query but misses key elements; in such situations, raters should prioritize responses that maintain a clearer connection to the user's intent. If both responses are relevant, the rater should favor the one that provides a more comprehensive or insightful engagement with the context.",
+      "accuracy": 0.8889,
+      "tested_on": 9
+    },
+    {
+      "metric_name": "conversational_flow",
+      "metric_description": "This metric evaluates the smoothness and coherence of the dialogue in the AI assistant's response within \"conversation_roleplay\" scenarios. Conversational flow is essential for maintaining user engagement and ensuring that the interaction feels natural and seamless. Positive indicators include logical progression of ideas, appropriate pacing, and the use of transitional phrases that connect thoughts effectively. Negative indicators may consist of abrupt topic shifts, disjointed responses, or lack of clarity that disrupts the flow of conversation. Ambiguity may arise when both responses are coherent but differ in pacing; raters should consider which response better facilitates an ongoing dialogue. If both responses exhibit good flow, the rater should prefer the one that provides a more engaging or dynamic conversational experience.",
+      "accuracy": 0.8889,
+      "tested_on": 9
+    },
+    {
+      "metric_name": "clarity_of_expression",
+      "metric_description": "This metric measures how clearly the AI assistant communicates its ideas and intentions in response to \"conversation_roleplay\" queries. Clarity of expression is vital for ensuring that users can easily understand the assistant's replies, which is particularly important in roleplay contexts where misunderstandings can hinder the interaction. Positive indicators include well-structured sentences, precise vocabulary, and clear articulation of thoughts. Negative indicators may involve vague language, convoluted sentence structures, or ambiguous references that confuse the user. Boundary cases may occur when both responses are clear but differ in complexity; in such situations, raters should prioritize the response that achieves clarity while also being appropriately engaging. If both responses are equally clear, the rater should prefer the one that provides more informative or detailed content.",
+      "accuracy": 0.8889,
+      "tested_on": 9
+    },
+    {
+      "metric_name": "emotional_resonance",
+      "metric_description": "This metric assesses the ability of the AI assistant's response to evoke emotional reactions or convey emotions effectively in \"conversation_roleplay\" scenarios. Emotional resonance is crucial for creating a compelling and immersive experience, as it allows users to connect with the characters and situations on a deeper level. Positive indicators include the use of emotive language, relatable expressions of feelings, or responses that reflect the emotional tone of the query. Negative indicators may involve responses that are overly mechanical, lack emotional depth, or fail to recognize the emotional context of the user's input. Boundary cases may occur when both responses display some emotional engagement, but one is more nuanced; in such instances, raters should prioritize the response that demonstrates a better understanding of the emotional dynamics at play. If both responses resonate equally, the rater should prefer the one that aligns more closely with the user's emotional state as inferred from the query.",
+      "accuracy": 0.7778,
+      "tested_on": 9
+    },
+    {
+      "metric_name": "adherence_to_prompt",
+      "metric_description": "This metric evaluates the extent to which the AI assistant's response adheres to the specific instructions or roles outlined in the \"conversation_roleplay\" query. Adherence to prompt is critical for ensuring that the assistant fulfills the user's expectations and maintains the integrity of the roleplay scenario. Positive indicators include accurate representation of the roles, direct engagement with the user's request, and responses that stay within the parameters set by the query. Negative indicators may include deviations from the assigned role, failure to address the user's request, or responses that introduce unrelated elements. Boundary cases may arise when both responses partially adhere to the prompt; in such instances, raters should consider which response better aligns with the user's explicit instructions. If both responses adhere equally well, the rater should prefer the one that demonstrates greater fidelity to the character or scenario established in the query.",
+      "accuracy": 0.7778,
+      "tested_on": 9
+    },
+    {
+      "metric_name": "creativity",
+      "metric_description": "This metric evaluates the originality and inventiveness of the AI assistant's response in \"conversation_roleplay\" scenarios. Creativity is essential for making interactions enjoyable and memorable, particularly in roleplay contexts where imaginative scenarios are expected. Positive indicators include unique character interpretations, unexpected plot developments, or clever dialogue that enhances the roleplay experience. Negative indicators may consist of clichéd responses, predictable dialogue, or a lack of imaginative engagement with the scenario. Ambiguous situations may arise if both responses exhibit some level of creativity but differ in execution; raters should consider the overall impact of the creativity on the interaction. If both responses are creative, the rater should prefer the one that introduces more unexpected or entertaining elements into the conversation.",
+      "accuracy": 0.6667,
+      "tested_on": 9
+    },
+    {
+      "metric_name": "character_consistency",
+      "metric_description": "This metric evaluates the degree to which the AI assistant maintains a consistent portrayal of the character it is roleplaying. In \"conversation_roleplay\" queries, it is crucial for the assistant to embody the traits, speech patterns, and knowledge of the specified character, as inconsistency can disrupt immersion and authenticity. Positive indicators include accurate references to the character's backstory, appropriate emotional responses, and language that reflects the character's personality. Conversely, negative indicators may involve contradictions in character traits, inappropriate language or behavior that does not align with the character, or failure to reference key elements of the character's identity. Boundary cases may arise when a character has multiple interpretations; in such instances, raters should consider the context provided in the query to determine the most fitting portrayal. If both responses exhibit character consistency, the rater should prefer the one that incorporates more nuanced or detailed aspects of the character's personality.",
+      "accuracy": 0.5556,
+      "tested_on": 9
+    }
+  ],
+  "verified_metrics": [
+    {
+      "metric_name": "engagement_level",
+      "metric_description": "This metric assesses how engaging and interactive the AI assistant's response is within the context of \"conversation_roleplay\" queries. An engaging response should invite further interaction, encouraging the user to continue the conversation through questions, humor, or relatable content. Positive indicators include the use of open-ended questions, humorous remarks, or references to shared experiences that prompt user engagement. Negative indicators might consist of overly brief or dismissive responses, lack of follow-up prompts, or a tone that feels flat or uninviting. Ambiguity may arise when both responses are engaging but differ in style; in such cases, raters should evaluate which response better aligns with the user's expectations based on the query. If both responses are equally engaging, the rater should prefer the one that demonstrates greater creativity or originality in fostering interaction.",
+      "accuracy": 0.8889,
+      "tested_on": 9
+    },
+    {
+      "metric_name": "contextual_relevance",
+      "metric_description": "This metric measures how well the AI assistant's response aligns with the context and content of the user's query in \"conversation_roleplay.\" Contextual relevance is vital for ensuring that the assistant's reply is appropriate and meaningful within the scenario presented. Positive indicators include direct references to elements from the query, logical progression of the conversation, and responses that address the user's implied needs or emotions. Negative indicators may involve responses that stray off-topic, introduce unrelated information, or fail to acknowledge critical aspects of the user's scenario. Boundary cases can occur when a response partially addresses the query but misses key elements; in such situations, raters should prioritize responses that maintain a clearer connection to the user's intent. If both responses are relevant, the rater should favor the one that provides a more comprehensive or insightful engagement with the context.",
+      "accuracy": 0.8889,
+      "tested_on": 9
+    }
+  ]
+}

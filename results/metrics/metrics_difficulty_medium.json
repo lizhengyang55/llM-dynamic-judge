@@ -1,0 +1,90 @@
+{
+  "dimension_id": "difficulty",
+  "group_label": "medium",
+  "num_samples_in_group": 63,
+  "num_candidate_metrics": 8,
+  "num_verified_metrics": 5,
+  "accuracy_threshold": 0.9,
+  "all_candidates": [
+    {
+      "metric_name": "clarity_of_explanation",
+      "metric_description": "This metric evaluates how clearly the AI assistant explains concepts or instructions in response to medium difficulty queries. Clarity is crucial because users often seek straightforward, understandable guidance, especially for questions that may involve technical or nuanced information. Positive indicators include the use of simple language, logical organization of ideas, and the presence of relevant examples or analogies that aid comprehension. Conversely, negative indicators include jargon-heavy language, convoluted sentence structures, or a lack of clear progression in the explanation, which can confuse the user. Ambiguous situations may arise when both responses provide some clarity but differ in comprehensibility; in such cases, the response that uses more relatable examples should be favored. If both responses are equally clear, a rater should prefer the one that includes a visual aid or analogy that enhances understanding.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "relevance_to_query",
+      "metric_description": "This metric assesses how well the AI assistant's response addresses the specific question posed in the medium difficulty query. Relevance is important because users expect answers that directly respond to their inquiries without straying off-topic. Positive indicators include direct answers to the question, acknowledgment of the query's context, and the inclusion of pertinent details that enhance the response. Negative indicators include off-topic information, vague statements that do not answer the question, or irrelevant examples that distract from the main issue. In cases where both responses partially address the query, the one that includes more directly applicable information should be preferred. If both responses are equally relevant, the rater should favor the one that provides a more comprehensive answer.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "depth_of_information",
+      "metric_description": "This metric evaluates the richness and depth of the information provided in the response to medium difficulty queries. Depth is essential because users often seek not only answers but also context and additional insights that enhance their understanding of the topic. Positive indicators include detailed explanations, relevant background information, and connections to broader concepts or applications. Negative indicators include superficial answers that lack detail, failure to explore related aspects of the question, or a simplistic approach to complex topics. Ambiguity may arise when both responses offer similar levels of detail; in such cases, the response that presents a more nuanced perspective or additional examples should be favored. If both responses are equally informative, the rater should prefer the one that presents information in a more engaging manner.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "accuracy_of_information",
+      "metric_description": "This metric measures the factual correctness of the information provided in the AI assistant's response to medium difficulty queries. Accuracy is critical because users rely on correct information to make decisions or gain understanding. Positive indicators include well-supported claims, correct definitions, and alignment with established knowledge or practices. Negative indicators include factual inaccuracies, misleading statements, or unsupported claims that could lead to user confusion or misinformation. In cases where both responses contain some accurate information but also errors, the response with fewer inaccuracies should be preferred. If both responses are equally accurate, the rater should favor the one that cites credible sources or provides evidence for its claims.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "engagement_and_style",
+      "metric_description": "This metric assesses the engaging quality and stylistic choices of the AI assistant's response to medium difficulty queries. Engagement is important because a well-styled response can capture the user's interest and encourage further exploration of the topic. Positive indicators include a conversational tone, varied sentence structures, and the use of rhetorical questions or humor where appropriate. Negative indicators include monotonous language, overly formal or stiff phrasing, and a lack of personality that may render the response dull. Ambiguity may arise when both responses are engaging but differ in style; in such cases, the response that better matches the tone of the query should be preferred. If both responses are equally engaging, the rater should favor the one that uses more vivid language or imagery.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "completeness_of_response",
+      "metric_description": "This metric evaluates how thoroughly the AI assistant addresses all components of the user's query in medium difficulty responses. Completeness is vital because users often expect a comprehensive answer that covers all aspects of their question. Positive indicators include addressing all parts of the query, providing follow-up questions or suggestions, and including additional relevant information that enhances the answer. Negative indicators include omitting key elements of the query, providing an incomplete answer, or failing to offer additional insights that could be beneficial to the user. Ambiguity may arise when both responses are partially complete; in such cases, the response that covers the most components of the query should be favored. If both responses are equally complete, the rater should prefer the one that offers the most actionable advice.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "logical_coherence",
+      "metric_description": "This metric assesses the logical flow and coherence of the AI assistant's response to medium difficulty queries. Logical coherence is essential to ensure that the response is easy to follow and that the user can understand the reasoning behind the information provided. Positive indicators include a clear structure, logical progression of ideas, and effective use of transitions that guide the user through the response. Negative indicators include disjointed ideas, lack of clear connections between points, and abrupt shifts in topic that may confuse the user. Ambiguity may arise when both responses demonstrate some logical flow but differ in clarity; in such cases, the response with a more straightforward structure should be favored. If both responses are equally coherent, the rater should prefer the one that presents ideas in a more organized manner.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "user_centricity",
+      "metric_description": "This metric evaluates how well the AI assistant tailors its response to the specific needs and context of the user in medium difficulty queries. User-centricity is important because responses that consider the user's perspective are more likely to be helpful and relevant. Positive indicators include addressing the user's specific circumstances, using language that resonates with the user's level of understanding, and offering personalized suggestions or solutions. Negative indicators include generic responses that do not consider the user's context, overly technical language that may alienate the user, and a lack of empathy or understanding of the user's situation. Ambiguity may arise when both responses show some level of user consideration; in such cases, the response that more effectively addresses the user's unique situation should be favored. If both responses are equally user-centric, the rater should prefer the one that provides more tailored recommendations.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    }
+  ],
+  "verified_metrics": [
+    {
+      "metric_name": "relevance_to_query",
+      "metric_description": "This metric assesses how well the AI assistant's response addresses the specific question posed in the medium difficulty query. Relevance is important because users expect answers that directly respond to their inquiries without straying off-topic. Positive indicators include direct answers to the question, acknowledgment of the query's context, and the inclusion of pertinent details that enhance the response. Negative indicators include off-topic information, vague statements that do not answer the question, or irrelevant examples that distract from the main issue. In cases where both responses partially address the query, the one that includes more directly applicable information should be preferred. If both responses are equally relevant, the rater should favor the one that provides a more comprehensive answer.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "depth_of_information",
+      "metric_description": "This metric evaluates the richness and depth of the information provided in the response to medium difficulty queries. Depth is essential because users often seek not only answers but also context and additional insights that enhance their understanding of the topic. Positive indicators include detailed explanations, relevant background information, and connections to broader concepts or applications. Negative indicators include superficial answers that lack detail, failure to explore related aspects of the question, or a simplistic approach to complex topics. Ambiguity may arise when both responses offer similar levels of detail; in such cases, the response that presents a more nuanced perspective or additional examples should be favored. If both responses are equally informative, the rater should prefer the one that presents information in a more engaging manner.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "accuracy_of_information",
+      "metric_description": "This metric measures the factual correctness of the information provided in the AI assistant's response to medium difficulty queries. Accuracy is critical because users rely on correct information to make decisions or gain understanding. Positive indicators include well-supported claims, correct definitions, and alignment with established knowledge or practices. Negative indicators include factual inaccuracies, misleading statements, or unsupported claims that could lead to user confusion or misinformation. In cases where both responses contain some accurate information but also errors, the response with fewer inaccuracies should be preferred. If both responses are equally accurate, the rater should favor the one that cites credible sources or provides evidence for its claims.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "completeness_of_response",
+      "metric_description": "This metric evaluates how thoroughly the AI assistant addresses all components of the user's query in medium difficulty responses. Completeness is vital because users often expect a comprehensive answer that covers all aspects of their question. Positive indicators include addressing all parts of the query, providing follow-up questions or suggestions, and including additional relevant information that enhances the answer. Negative indicators include omitting key elements of the query, providing an incomplete answer, or failing to offer additional insights that could be beneficial to the user. Ambiguity may arise when both responses are partially complete; in such cases, the response that covers the most components of the query should be favored. If both responses are equally complete, the rater should prefer the one that offers the most actionable advice.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "logical_coherence",
+      "metric_description": "This metric assesses the logical flow and coherence of the AI assistant's response to medium difficulty queries. Logical coherence is essential to ensure that the response is easy to follow and that the user can understand the reasoning behind the information provided. Positive indicators include a clear structure, logical progression of ideas, and effective use of transitions that guide the user through the response. Negative indicators include disjointed ideas, lack of clear connections between points, and abrupt shifts in topic that may confuse the user. Ambiguity may arise when both responses demonstrate some logical flow but differ in clarity; in such cases, the response with a more straightforward structure should be favored. If both responses are equally coherent, the rater should prefer the one that presents ideas in a more organized manner.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    }
+  ]
+}

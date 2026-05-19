@@ -1,0 +1,90 @@
+{
+  "dimension_id": "response_format",
+  "group_label": "short_answer",
+  "num_samples_in_group": 52,
+  "num_candidate_metrics": 8,
+  "num_verified_metrics": 5,
+  "accuracy_threshold": 0.9,
+  "all_candidates": [
+    {
+      "metric_name": "factual_accuracy",
+      "metric_description": "This metric evaluates the factual accuracy of the response in relation to the query, which is critical for \"short_answer\" queries that typically seek concise, direct information. A response scores well on this metric if it provides a correct and precise answer that aligns with established facts or widely accepted knowledge. Positive indicators include the use of specific names, dates, or definitions that are verifiable and relevant to the query, such as stating \"Thomas Edison\" as the inventor of the lightbulb. Conversely, negative indicators include incorrect or misleading information, vague statements, or answers that deviate significantly from the factual basis of the query, such as claiming \"some guy\" invented the lightbulb. Boundary cases may arise when both responses provide partially accurate information; in such cases, the response with a more precise or widely recognized fact should be favored. Tie-breaking should occur in favor of the response that provides a more authoritative source or detail, such as a specific year or context.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "relevance",
+      "metric_description": "This metric assesses the relevance of the response to the specific query, which is essential for ensuring that the answer directly addresses the user's question. A response is considered relevant if it directly answers the query without introducing unrelated information or tangents. Positive indicators include a clear focus on the main subject of the query, such as directly answering \"What is PyTorch?\" with a concise definition of the software. Negative indicators include off-topic responses, excessive elaboration on unrelated subjects, or failure to address the core question, such as discussing general machine learning concepts instead of PyTorch. Boundary cases may occur when a response is partially relevant; in such cases, the response that maintains a closer alignment with the query's intent should be prioritized. Tie-breaking should favor the response that provides a more succinct and direct answer over one that, while somewhat relevant, includes unnecessary details.",
+      "accuracy": 0.8,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "conciseness",
+      "metric_description": "This metric measures the conciseness of the response, which is particularly important for \"short_answer\" queries that require brevity without sacrificing clarity. A response scores well on this metric if it conveys the necessary information in a clear and succinct manner, avoiding unnecessary filler or overly complex language. Positive indicators include the use of straightforward language and a direct answer that does not exceed a few sentences, such as simply stating \"The next number in the sequence is 36.\" Negative indicators include overly verbose explanations, redundant phrases, or convoluted sentence structures that obscure the main point, such as providing a lengthy rationale for a simple mathematical answer. Boundary cases may arise when both responses are concise but one is slightly more verbose; in such cases, the response that eliminates any superfluous information should be favored. Tie-breaking should prioritize the response that communicates the answer in the fewest words while maintaining clarity.",
+      "accuracy": 0.3,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "grammatical_correctness",
+      "metric_description": "This metric evaluates the grammatical correctness of the response, which is vital for ensuring that the answer is easily understandable and professionally presented. A response is rated highly on this metric if it adheres to standard grammar rules, including proper sentence structure, punctuation, and spelling. Positive indicators include well-formed sentences that are free from errors, such as \"There are 99 murderers left in the room.\" Negative indicators include grammatical errors, awkward phrasing, or typos that detract from the clarity of the response, such as \"There is 100 murderers left in the room.\" Boundary cases may arise when both responses contain minor grammatical issues; in such instances, the response with fewer or less impactful errors should be preferred. Tie-breaking should favor the response that demonstrates a higher level of fluency and professionalism in language use.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "specificity",
+      "metric_description": "This metric assesses the specificity of the response, which is crucial for \"short_answer\" queries that often require precise answers rather than vague or general statements. A response scores well if it provides specific details that directly address the query, such as naming a particular movie or event rather than providing a general overview. Positive indicators include the inclusion of specific names, numbers, or examples that enhance the clarity of the answer, such as stating \"Grace Kelly's final movie was 'High Society'.\" Negative indicators include vague answers that lack detail or specificity, such as saying \"a movie\" without naming it. Boundary cases may occur when both responses provide some specific information but differ in detail; in such cases, the response with the most relevant and precise details should be favored. Tie-breaking should favor the response that includes unique or lesser-known specifics that enhance the answer's informative value.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "coherence",
+      "metric_description": "This metric evaluates the coherence of the response, which is essential for ensuring that the answer is logically structured and easy to follow. A response is considered coherent if it presents information in a logical sequence and maintains a clear focus throughout. Positive indicators include a well-organized response that flows smoothly from one point to another, such as clearly outlining the steps to solve a problem. Negative indicators include disjointed thoughts, abrupt topic changes, or responses that lack a clear direction, such as jumping from one unrelated idea to another without transition. Boundary cases may arise when both responses are somewhat coherent but one has minor logical flaws; in such cases, the response with a clearer structure should be preferred. Tie-breaking should favor the response that provides a more logical progression of ideas, even if both responses are generally coherent.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "engagement",
+      "metric_description": "This metric assesses the level of engagement of the response, which is important for maintaining user interest and ensuring that the answer resonates with the user's needs. A response scores well on this metric if it employs an engaging tone or style that encourages further interaction or thought. Positive indicators include the use of a conversational tone, rhetorical questions, or relatable examples that connect with the user's experience, such as saying \"Imagine trying to solve that puzzle!\" Negative indicators include overly dry or technical language that fails to engage the user, or responses that feel robotic and impersonal, such as a flat recitation of facts. Boundary cases may arise when both responses are similarly engaging; in such cases, the response that uses more relatable language or examples should be favored. Tie-breaking should favor the response that invites further discussion or exploration of the topic.",
+      "accuracy": 0.6,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "contextual_understanding",
+      "metric_description": "This metric evaluates the response's ability to demonstrate an understanding of the context surrounding the query, which is vital for providing relevant and appropriate answers. A response is rated highly if it reflects an awareness of the nuances or implications of the query, such as recognizing when a question has multiple interpretations. Positive indicators include addressing the specific context of the query and tailoring the response accordingly, such as providing a culturally relevant example or acknowledging the user's situation. Negative indicators include failing to recognize contextual cues, providing generic answers that do not fit the specific scenario, or misunderstanding the query's intent, such as misinterpreting a joke as a serious question. Boundary cases may arise when both responses show some understanding of context but differ in depth; in such cases, the response that demonstrates a more nuanced understanding should be favored. Tie-breaking should favor the response that acknowledges or addresses potential ambiguities in the query.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    }
+  ],
+  "verified_metrics": [
+    {
+      "metric_name": "factual_accuracy",
+      "metric_description": "This metric evaluates the factual accuracy of the response in relation to the query, which is critical for \"short_answer\" queries that typically seek concise, direct information. A response scores well on this metric if it provides a correct and precise answer that aligns with established facts or widely accepted knowledge. Positive indicators include the use of specific names, dates, or definitions that are verifiable and relevant to the query, such as stating \"Thomas Edison\" as the inventor of the lightbulb. Conversely, negative indicators include incorrect or misleading information, vague statements, or answers that deviate significantly from the factual basis of the query, such as claiming \"some guy\" invented the lightbulb. Boundary cases may arise when both responses provide partially accurate information; in such cases, the response with a more precise or widely recognized fact should be favored. Tie-breaking should occur in favor of the response that provides a more authoritative source or detail, such as a specific year or context.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "grammatical_correctness",
+      "metric_description": "This metric evaluates the grammatical correctness of the response, which is vital for ensuring that the answer is easily understandable and professionally presented. A response is rated highly on this metric if it adheres to standard grammar rules, including proper sentence structure, punctuation, and spelling. Positive indicators include well-formed sentences that are free from errors, such as \"There are 99 murderers left in the room.\" Negative indicators include grammatical errors, awkward phrasing, or typos that detract from the clarity of the response, such as \"There is 100 murderers left in the room.\" Boundary cases may arise when both responses contain minor grammatical issues; in such instances, the response with fewer or less impactful errors should be preferred. Tie-breaking should favor the response that demonstrates a higher level of fluency and professionalism in language use.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "specificity",
+      "metric_description": "This metric assesses the specificity of the response, which is crucial for \"short_answer\" queries that often require precise answers rather than vague or general statements. A response scores well if it provides specific details that directly address the query, such as naming a particular movie or event rather than providing a general overview. Positive indicators include the inclusion of specific names, numbers, or examples that enhance the clarity of the answer, such as stating \"Grace Kelly's final movie was 'High Society'.\" Negative indicators include vague answers that lack detail or specificity, such as saying \"a movie\" without naming it. Boundary cases may occur when both responses provide some specific information but differ in detail; in such cases, the response with the most relevant and precise details should be favored. Tie-breaking should favor the response that includes unique or lesser-known specifics that enhance the answer's informative value.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "coherence",
+      "metric_description": "This metric evaluates the coherence of the response, which is essential for ensuring that the answer is logically structured and easy to follow. A response is considered coherent if it presents information in a logical sequence and maintains a clear focus throughout. Positive indicators include a well-organized response that flows smoothly from one point to another, such as clearly outlining the steps to solve a problem. Negative indicators include disjointed thoughts, abrupt topic changes, or responses that lack a clear direction, such as jumping from one unrelated idea to another without transition. Boundary cases may arise when both responses are somewhat coherent but one has minor logical flaws; in such cases, the response with a clearer structure should be preferred. Tie-breaking should favor the response that provides a more logical progression of ideas, even if both responses are generally coherent.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "contextual_understanding",
+      "metric_description": "This metric evaluates the response's ability to demonstrate an understanding of the context surrounding the query, which is vital for providing relevant and appropriate answers. A response is rated highly if it reflects an awareness of the nuances or implications of the query, such as recognizing when a question has multiple interpretations. Positive indicators include addressing the specific context of the query and tailoring the response accordingly, such as providing a culturally relevant example or acknowledging the user's situation. Negative indicators include failing to recognize contextual cues, providing generic answers that do not fit the specific scenario, or misunderstanding the query's intent, such as misinterpreting a joke as a serious question. Boundary cases may arise when both responses show some understanding of context but differ in depth; in such cases, the response that demonstrates a more nuanced understanding should be favored. Tie-breaking should favor the response that acknowledges or addresses potential ambiguities in the query.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    }
+  ]
+}

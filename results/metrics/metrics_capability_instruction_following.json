@@ -1,0 +1,78 @@
+{
+  "dimension_id": "capability",
+  "group_label": "instruction_following",
+  "num_samples_in_group": 27,
+  "num_candidate_metrics": 8,
+  "num_verified_metrics": 3,
+  "accuracy_threshold": 0.9,
+  "all_candidates": [
+    {
+      "metric_name": "instruction_clarity",
+      "metric_description": "This metric evaluates the clarity of the instructions provided in the response to an \"instruction_following\" query. Clarity is crucial because it ensures that users can easily understand and follow the guidance given, which is especially important for technical tasks like coding or data analysis. Positive indicators include well-structured responses that use clear language, logical sequencing, and appropriate formatting (e.g., bullet points or numbered lists) to enhance readability. Conversely, negative indicators involve vague language, convoluted explanations, or excessive jargon that could confuse the user. Ambiguous situations may arise when both responses provide some clarity but differ in structure; in such cases, the response with clearer formatting should be preferred. Tie-breaking should favor the response that includes explicit examples or analogies to illustrate complex points, as this enhances user understanding.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "completeness_of_instructions",
+      "metric_description": "This metric assesses the completeness of the instructions given in response to an \"instruction_following\" query. Completeness is vital as it ensures that all necessary steps or components are included for the user to successfully execute the task. Positive indicators include a thorough breakdown of tasks, covering all relevant aspects of the query, such as prerequisites, step-by-step actions, and potential pitfalls. Negative indicators consist of missing critical steps, lack of context, or failure to address all parts of the query, which could lead to user confusion or incomplete execution. Edge cases may involve responses that partially address the query; in such instances, the response that covers the most critical components should be favored. When both responses are equally complete, a rater should prefer the one that provides additional context or resources for further understanding.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "accuracy_of_content",
+      "metric_description": "This metric evaluates the factual accuracy of the content provided in the response to an \"instruction_following\" query. Accuracy is essential, especially in technical domains, as incorrect information can lead to errors in execution or misunderstanding of concepts. Positive indicators include correct technical terminology, accurate code snippets, and valid data analysis methods that align with the query's requirements. Negative indicators involve factual inaccuracies, such as incorrect code syntax, misleading information, or irrelevant examples that do not pertain to the query. Boundary cases may occur when both responses contain some accurate information but also include errors; in such cases, the response with fewer inaccuracies should be preferred. Tie-breaking should favor the response that cites credible sources or provides references to support its claims.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "responsiveness_to_query",
+      "metric_description": "This metric assesses how well the response addresses the specific needs and context of the \"instruction_following\" query. Responsiveness is crucial as it ensures that the guidance provided is tailored to the user's situation, enhancing the likelihood of successful task completion. Positive indicators include direct answers to the query, acknowledgment of the user's context, and relevant examples that align with the user's stated needs. Negative indicators consist of generic responses that do not address the specifics of the query, irrelevant information, or a lack of engagement with the user's context. Ambiguous situations may arise when both responses are somewhat responsive; in these cases, the response that more closely aligns with the user's stated goals should be favored. Tie-breaking should prefer the response that anticipates potential follow-up questions or clarifications.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "code_correctness",
+      "metric_description": "This metric evaluates the correctness of any code provided in response to an \"instruction_following\" query that involves programming tasks. Code correctness is paramount as even minor errors can lead to significant issues in execution. Positive indicators include syntactically correct code, logical flow, and successful execution of the code snippet when tested. Negative indicators consist of syntax errors, logical flaws, or code that does not accomplish the intended task as described in the query. Boundary cases may occur when both responses contain correct and incorrect elements; in such instances, the response with the most functional code should be preferred. Tie-breaking should favor the response that includes comments or explanations within the code to clarify its functionality.",
+      "accuracy": 0.5,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "conciseness",
+      "metric_description": "This metric evaluates the conciseness of the response to an \"instruction_following\" query, focusing on the ability to convey necessary information without unnecessary elaboration. Conciseness is important as it helps users quickly grasp the essential instructions without being overwhelmed by extraneous details. Positive indicators include succinct responses that directly address the query while maintaining clarity and completeness. Negative indicators involve overly verbose explanations, redundant information, or excessive detail that detracts from the main points. Ambiguous situations may arise when both responses are concise but differ in essential content; in such cases, the response that maintains a balance between brevity and completeness should be preferred. Tie-breaking should favor the response that effectively uses concise language while still providing necessary context or examples.",
+      "accuracy": 0.3,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "formatting_quality",
+      "metric_description": "This metric assesses the quality of formatting in the response to an \"instruction_following\" query, which is crucial for enhancing readability and user engagement. Good formatting helps users quickly locate and understand key information, making it easier to follow instructions. Positive indicators include the use of headings, bullet points, numbered lists, code blocks, and appropriate spacing to organize content effectively. Negative indicators consist of poorly structured responses, lack of visual hierarchy, or cluttered text that makes it difficult for users to parse the information. Boundary cases may occur when both responses have some formatting but differ in effectiveness; in such cases, the response with clearer organization should be favored. Tie-breaking should prefer the response that employs formatting techniques that enhance user comprehension, such as highlighting key terms or steps.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "engagement_level",
+      "metric_description": "This metric evaluates the level of engagement in the response to an \"instruction_following\" query, focusing on how well the response captures the user's interest and encourages interaction. Engagement is important as it can motivate users to follow through with the instructions provided. Positive indicators include a conversational tone, prompts for user feedback, and encouraging language that invites the user to ask further questions or seek clarification. Negative indicators consist of a dry, impersonal tone, lack of interaction prompts, or language that may discourage user participation. Ambiguous situations may arise when both responses exhibit some engagement; in such cases, the response that uses more inviting language or poses questions to the user should be preferred. Tie-breaking should favor the response that includes suggestions for next steps or additional resources that encourage further exploration.",
+      "accuracy": 0.7,
+      "tested_on": 10
+    }
+  ],
+  "verified_metrics": [
+    {
+      "metric_name": "instruction_clarity",
+      "metric_description": "This metric evaluates the clarity of the instructions provided in the response to an \"instruction_following\" query. Clarity is crucial because it ensures that users can easily understand and follow the guidance given, which is especially important for technical tasks like coding or data analysis. Positive indicators include well-structured responses that use clear language, logical sequencing, and appropriate formatting (e.g., bullet points or numbered lists) to enhance readability. Conversely, negative indicators involve vague language, convoluted explanations, or excessive jargon that could confuse the user. Ambiguous situations may arise when both responses provide some clarity but differ in structure; in such cases, the response with clearer formatting should be preferred. Tie-breaking should favor the response that includes explicit examples or analogies to illustrate complex points, as this enhances user understanding.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "completeness_of_instructions",
+      "metric_description": "This metric assesses the completeness of the instructions given in response to an \"instruction_following\" query. Completeness is vital as it ensures that all necessary steps or components are included for the user to successfully execute the task. Positive indicators include a thorough breakdown of tasks, covering all relevant aspects of the query, such as prerequisites, step-by-step actions, and potential pitfalls. Negative indicators consist of missing critical steps, lack of context, or failure to address all parts of the query, which could lead to user confusion or incomplete execution. Edge cases may involve responses that partially address the query; in such instances, the response that covers the most critical components should be favored. When both responses are equally complete, a rater should prefer the one that provides additional context or resources for further understanding.",
+      "accuracy": 1.0,
+      "tested_on": 10
+    },
+    {
+      "metric_name": "formatting_quality",
+      "metric_description": "This metric assesses the quality of formatting in the response to an \"instruction_following\" query, which is crucial for enhancing readability and user engagement. Good formatting helps users quickly locate and understand key information, making it easier to follow instructions. Positive indicators include the use of headings, bullet points, numbered lists, code blocks, and appropriate spacing to organize content effectively. Negative indicators consist of poorly structured responses, lack of visual hierarchy, or cluttered text that makes it difficult for users to parse the information. Boundary cases may occur when both responses have some formatting but differ in effectiveness; in such cases, the response with clearer organization should be favored. Tie-breaking should prefer the response that employs formatting techniques that enhance user comprehension, such as highlighting key terms or steps.",
+      "accuracy": 0.9,
+      "tested_on": 10
+    }
+  ]
+}
