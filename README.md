@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # LLM Metric Database
 
 This project builds a metric database with an LLM, then uses that database to
@@ -82,3 +83,7 @@ process_single_group(cluster_file, group_label)
 
 Replace the stub with the original implementation before running the build
 phase.
+=======
+# llM-dynamic-judge
+A self-evolving pairwise scoring algorithm with dynamic metric boosting for LLM evaluation.
+>>>>>>> 06d7d8a2792403fb8169c4eb26f2d3b29b2ac829
